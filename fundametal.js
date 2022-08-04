@@ -18,3 +18,9 @@ let age = 30;
 age = 31;
 console.log(age);
 //let diye jei variable likhbo shetake abar reassing kora jay.mane ami chaile proyojon onujai (let variable) er value ke change korte parbo.
+
+const day = "sunday";
+console.log(day);
+// day = "monday";
+// console.log(day);
+//const diye jei variable likhbo shetir value change kora jay na.r value ke change kore dile error dekhabe.
