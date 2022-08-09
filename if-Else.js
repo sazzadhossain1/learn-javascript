@@ -1,16 +1,26 @@
-const age = 15;
+// const age = 15;
 
-if (age >= 18) {
-  console.log("sarah can start driving license");
-} else {
-  const yearLeft = 18 - age; // ---> ai khane age take dynamic vabe access korar jonno alada akta variable niye nilam.And age ke (-) korlam 18 er shathe.....
-  console.log(`Sara is to young.Wait another ${yearLeft} years`);
-}
+// if (age >= 18) {
+//   console.log("sarah can start driving license");
+// } else {
+//   const yearLeft = 18 - age; // ---> ai khane age take dynamic vabe access korar jonno alada akta variable niye nilam.And age ke (-) korlam 18 er shathe.....
+//   console.log(`Sara is to young.Wait another ${yearLeft} years`);
+// }
 
-const name = "Sarah";
-if (age >= 18) {
-  console.log(`${name} is get driving license`);
+// const name = "Sarah";
+// if (age >= 18) {
+//   console.log(`${name} is get driving license`);
+// } else {
+//   const waitYears = 18 - age;
+//   console.log(`${name} is to young.Wait another ${waitYears} years`);
+// }
+
+const birthYear = 2012;
+
+if (birthYear <= 2022) {
+  let century = 2000;
+  console.log(century);
 } else {
-  const waitYears = 18 - age;
-  console.log(`${name} is to young.Wait another ${waitYears} years`);
+  let century = 2023;
+  console.log(century);
 }
