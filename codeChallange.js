@@ -40,19 +40,52 @@ let markBMI = markMass / markHeight ** 2;
 let johnBMI = johnMass / (johnHeight * johnHeight);
 
 let markHeightBMI = markBMI > johnBMI;
-console.log(markBMI, johnBMI, markHeightBMI);
+// console.log(markBMI, johnBMI, markHeightBMI);
 
 let higherBMI = markBMI > johnBMI || johnBMI < markBMI;
-console.log(higherBMI);
+// console.log(higherBMI);
 
 // if (markBMI > johnBMI) {
 //   console.log("Mark's BMI is higher than John's!");
 // } else {
 //   console.log("john's BMI is higher than Mark's!");
 // }
-if (markBMI > johnBMI) {
-  console.log(`Mark's BMI is ${markBMI} higher than John's!${johnBMI}`);
-} else {
-  console.log(`john's BMI is ${johnBMI} higher than Mark's!${markBMI}`);
-}
+// if (markBMI > johnBMI) {
+//   console.log(`Mark's BMI is ${markBMI} higher than John's!${johnBMI}`);
+// } else {
+//   console.log(`john's BMI is ${johnBMI} higher than Mark's!${markBMI}`);
+// }
 ////////////////////////////////////////////////////////////////
+
+// Code challange # 3 //
+//...................//
+
+// const dolphinsScore = (96 + 108 + 89) / 3;
+// const koalasScore = (88 + 91 + 110) / 3;
+
+// console.log(dolphinsScore, koalasScore);
+
+// if (dolphinsScore > koalasScore) {
+//   console.log("Dolphin is winner");
+// } else if (koalasScore > dolphinsScore) {
+//   console.log("Koalas is winner");
+// } else if (dolphinsScore === koalasScore) {
+//   console.log("Match is draw");
+// }
+
+const dolphinsScore1 = (97 + 112 + 101) / 3;
+const koalasScore1 = (109 + 95 + 106) / 3;
+
+if (dolphinsScore1 > koalasScore1 && dolphinsScore1 >= 100) {
+  console.log("Dolphin is winner");
+} else if (koalasScore1 > dolphinsScore1 && koalasScore1 >= 100) {
+  console.log("koalas is winner");
+} else if (
+  dolphinsScore1 === koalasScore1 &&
+  dolphinsScore1 >= 100 &&
+  koalasScore1 >= 100
+) {
+  console.log("Match is draw");
+} else {
+  console.log("No one is winner");
+}
