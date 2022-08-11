@@ -73,19 +73,28 @@ let higherBMI = markBMI > johnBMI || johnBMI < markBMI;
 //   console.log("Match is draw");
 // }
 
-const dolphinsScore1 = (97 + 112 + 101) / 3;
-const koalasScore1 = (109 + 95 + 106) / 3;
+// const dolphinsScore1 = (97 + 112 + 101) / 3;
+// const koalasScore1 = (109 + 95 + 106) / 3;
 
-if (dolphinsScore1 > koalasScore1 && dolphinsScore1 >= 100) {
-  console.log("Dolphin is winner");
-} else if (koalasScore1 > dolphinsScore1 && koalasScore1 >= 100) {
-  console.log("koalas is winner");
-} else if (
-  dolphinsScore1 === koalasScore1 &&
-  dolphinsScore1 >= 100 &&
-  koalasScore1 >= 100
-) {
-  console.log("Match is draw");
-} else {
-  console.log("No one is winner");
-}
+// if (dolphinsScore1 > koalasScore1 && dolphinsScore1 >= 100) {
+//   console.log("Dolphin is winner");
+// } else if (koalasScore1 > dolphinsScore1 && koalasScore1 >= 100) {
+//   console.log("koalas is winner");
+// } else if (
+//   dolphinsScore1 === koalasScore1 &&
+//   dolphinsScore1 >= 100 &&
+//   koalasScore1 >= 100
+// ) {
+//   console.log("Match is draw");
+// } else {
+//   console.log("No one is winner");
+// }
+
+// Code challange # 4 //
+//...................//
+const bill = 275;
+
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
