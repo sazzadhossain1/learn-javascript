@@ -89,6 +89,7 @@ let higherBMI = markBMI > johnBMI || johnBMI < markBMI;
 // } else {
 //   console.log("No one is winner");
 // }
+/////////////////////////////////////////////////////////////
 
 // Code challange # 4 //
 //...................//
@@ -127,15 +128,15 @@ const calcAverage = (a, b, c) => {
 };
 let scoreDolphin = calcAverage(44, 23, 71);
 let scoreKoalas = calcAverage(65, 54, 49);
-console.log(scoreDolphin, scoreKoalas);
+// console.log(scoreDolphin, scoreKoalas);
 
 const checkWinner = function (avgDolphin, avgKoalas) {
   if (avgDolphin >= 2 * avgKoalas) {
-    console.log(`Dolphin Win  ${avgDolphin} vs. ${avgKoalas}`);
+    // console.log(`Dolphin Win  ${avgDolphin} vs. ${avgKoalas}`);
   } else if (avgKoalas >= 2 * avgDolphin) {
-    console.log(`Koalas Win  ${avgDolphin} vs. ${avgKoalas}`);
+    // console.log(`Koalas Win  ${avgDolphin} vs. ${avgKoalas}`);
   } else {
-    console.log("Ignore draws this time");
+    // console.log("Ignore draws this time");
   }
 };
 checkWinner(scoreDolphin, scoreKoalas);
@@ -143,3 +144,17 @@ checkWinner(scoreDolphin, scoreKoalas);
 scoreDolphin = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 checkWinner(scoreDolphin, scoreKoalas);
+/////////////////////////////////////////
+
+// Code challange # 6 //
+//...................//
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, total);

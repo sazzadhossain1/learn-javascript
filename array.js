@@ -37,7 +37,7 @@ const years = [1990, 1967, 2002, 2010, 2018];
 const age1 = calcAge(years[0]);
 const age2 = calcAge(years[1]);
 const age3 = calcAge(years[years.length - 1]);
-console.log(age1, age2, age3);
+// console.log(age1, age2, age3);
 
 // upore 3 ta variable age1, age2, age3 ke akhon akta variable er vitore rakhbo.ai 3 ta vaiable function ke akta array variable er vitore rakhte hobe....
 const age = [
@@ -45,4 +45,37 @@ const age = [
   calcAge(years[1]),
   calcAge(years[years.length - 1]),
 ];
-console.log(age);
+// console.log(age);
+const pushFriend = ["Abdur Rahman", "Saidee", "Shagor", "Shojib"];
+console.log(pushFriend);
+
+// Add Elements //
+pushFriend.unshift("Sazzad");
+
+const newFriend = pushFriend.push("Rakesh");
+console.log(pushFriend);
+
+console.log(newFriend);
+
+// Remove Elements //
+pushFriend.pop();
+console.log(pushFriend);
+pushFriend.shift();
+console.log(pushFriend);
+
+console.log(pushFriend.indexOf("Saidee")); // ===> array er vitore ai element er index number koto sheta dekhabe.....ai element er index number 1.
+console.log(pushFriend.indexOf("lasa")); // ===> atao element er index number dekhabe....jodi array te ai (lasa) element na thake tahole result (-1) dekhabe...
+console.log(pushFriend.includes("Shojib")); // ===> (include) er vitore (Shojib) deya aache... akhon (shojib) jodi array er vitore thake tahole result dekhabe (true)....akhon aitar result holo true..karon ("Shojib") pushFriend er vitore aache..
+console.log(pushFriend.includes("Shohan")); // ---> (inclue) er vitore (shohan) aache...akhon (shohan) jodi pushFriend array er vitore na thake tahole result ashbe (false);
+
+////////////////////
+pushFriend.push(23);
+console.log(pushFriend);
+const pushNum = pushFriend.includes(23);
+console.log(pushNum);
+
+if (pushFriend.includes("Shohan") || pushFriend.indexOf("Saidee")) {
+  console.log("I have a friend..Hi's my best friend");
+} else {
+  console.log("There is no friends");
+}
