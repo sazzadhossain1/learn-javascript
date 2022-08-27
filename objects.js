@@ -48,3 +48,31 @@ console.log(person);
 console.log(
   `${person.firstName} has ${person.friends.length} friends and his best friend is called ${person.friends[0]}`
 );
+
+// Object Method //
+const sazzad = {
+  firstName: "Sazzad",
+  lastName: "Hossain",
+  birthday: 1996,
+  job: "student",
+  friends: ["Solim", "Saidee", "Shagor", "Shojib"],
+  hasDrivingLicense: true,
+  // calcAge: function (birthYear) {
+  //   return birthYear - this.birthday;
+  // },
+  calcAge: function () {
+    this.age = 2022 - this.birthday;
+    return this.age;
+  },
+};
+
+// console.log(sazzad.calcAge(2022));
+console.log(sazzad.calcAge());
+// console.log(sazzad["calcAge"](2022));
+
+console.log(sazzad.age);
+console.log(
+  `${sazzad.firstName} is a ${sazzad.calcAge()} years old ${
+    sazzad.job
+  }, and he has ${sazzad.hasDrivingLicense ? "a" : "no"} driver's license.`
+);

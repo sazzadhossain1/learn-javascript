@@ -157,4 +157,41 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
 const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(bills, tips, total);
+// console.log(bills, tips, total);
+
+// Fundamentals part - 2 /---> Coding challange --- 3 //
+// ................................................. //
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+const john = {
+  fullName: "john smith",
+  mass: 92,
+  height: 1.95,
+  calBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calBMI();
+console.log(mark.bmi);
+john.calBMI();
+console.log(john.bmi);
+
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI ${mark.bmi} is higher then ${john.fullName}'s BMI (${john.bmi})`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI ${mark.bmi} is higher then ${john.fullName}'s BMI (${john.bmi})`
+  );
+}
