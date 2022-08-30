@@ -199,29 +199,8 @@ checkWinner(scoreDolphin, scoreKoalas);
 // Fundamentals part - 2 /---> Coding challange --- 4 //
 // ................................................. //
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-};
+// cons
 
-const bills1 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips1 = [];
-const total1 = [];
+//////////////////////////////////////////////////////////
 
-for (let i = 0; i < bills1.length; i = i + 1) {
-  const tip = calcTip(bills1[i]);
-  tips1.push(tip);
-  total1.push(tip + bills1[i]);
-}
-
-console.log(bills1, tips1, total1);
-
-const calcAverage1 = function (arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
-};
-console.log(calcAverage1([1, 2, 3]));
-console.log(calcAverage1(total1));
-console.log(calcAverage1(tips1));
+// Developer Skills & Editor Setup ---> coding challange ---- 1//
