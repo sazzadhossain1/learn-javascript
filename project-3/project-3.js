@@ -21,6 +21,16 @@ const scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 
+// create switch player function //
+
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle("player--active");
+  player1El.classList.toggle("player--active");
+};
+
 // Create Roll Dice Function //
 btnRoll.addEventListener("click", function () {
   // generating a random dice roll //
@@ -38,14 +48,28 @@ btnRoll.addEventListener("click", function () {
       currentScore;
     // current0El.textContent = currentScore;
   } else {
-    document.getElementById(`current--${activePlayer}`).textContent = 0;
-    currentScore = 0;
-    activePlayer = activePlayer === 0 ? 1 : 0;
-    player0El.classList.toggle("player--active");
-    player1El.classList.toggle("player--active");
+    switchPlayer();
   }
 });
 
+btnHold.addEventListener("click", function () {
+  scores[activePlayer] += currentScore;
+
+  document.getElementById(`score--${activePlayer}`).textContent =
+    scores[activePlayer];
+
+  if (scores[activePlayer] >= 20) {
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.add("player--winner");
+
+    document
+      .querySelector(`.player--${activePlayer}`)
+      .classList.remove("player--active");
+  } else {
+    switchPlayer();
+  }
+});
 //----------------------------------------------------
 
 // const sorce0Ele = document.querySelector("#score--0");
