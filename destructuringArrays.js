@@ -120,7 +120,7 @@ const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
   categories: ["Italian", "Pizzeria", "Vegetarian", "Oranic"],
-  startMenu: ["Focaccia", "Bruuschetta", "Garlic", "Bread", "Caprese Salad"],
+  startMenu: ["Focaccia", "Bruuschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "pasta", "Risotto"],
 
   order: function (starterIndex, mainIndex) {
@@ -140,4 +140,13 @@ first = second;
 second = temp;
 console.log(first, second);
 
-console.log(restaurant.order(2, 0));
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
+
+const nested = [2, 4, [5, 6]];
+const [t, , [x, y]] = nested;
+console.log(t, x, y);
+
+const defaul = [1, 2];
+const [q = 1, u = 1, r = 1] = defaul;
+console.log(q, u, r);
