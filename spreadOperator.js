@@ -39,44 +39,75 @@ const restaurant = {
   },
 };
 
-const newManiu = [...restaurant.mainMenu, "Gnocci"];
-console.log(newManiu);
-// const arr = [7, 8, 9];
-// const newArray = [1, 2, ...arr];
-// console.log(newArray);
-// console.log(...newArray);
+////////////////////////////////////////////////
+
+const arr = [7, 8, 9];
+const newArray = [1, 2, ...arr];
+const newOneArray = [...newArray];
+
+console.log(newArray);
+console.log(newArray);
+console.log(...newArray);
+
+const newMenu = [...restaurant.mainMenu, "Gnocci"];
+console.log(newMenu);
+
+// copy array //
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
 
 // join 2 array //
-
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
-//...................................//
 
-const str = "sazzad";
-const letters = [...str]; // ---> ami jokhon str ke letters variable er vitore spread operator er maddhome copy korbo      [...str] tokhon "sazzad" likha tir protita okkhor alada alada hoye jabe jemon ----> [ 's', 'a', 'z', 'z', 'a', 'd' ]
+const friends = "sazzad";
+const letters = [...friends];
 console.log(letters);
-console.log(...str);
 
-//................................
-const ingredients = [
-  //   prompt("Let's amke pasta! Ingredient 1?"),
-  //   prompt("Ingredient 2?"),
-  //   prompt("Ingredinent 3?"),
-];
+const [a, , , , , b] = letters;
+console.log(a, b);
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
 
-console.log(ingredients);
+// const newManiu = [...restaurant.mainMenu, "Gnocci"];
+// console.log(newManiu);
+// // const arr = [7, 8, 9];
+// // const newArray = [1, 2, ...arr];
+// // console.log(newArray);
+// // console.log(...newArray);
 
-restaurant.orderPasta(...ingredients);
+// // join 2 array //
 
-const newRestaurant = {
-  foundedIn: 1998,
-  ...restaurant,
-  founder: "Guiseppe",
-};
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+// //...................................//
 
-console.log(newRestaurant);
+// const str = "sazzad";
+// const letters = [...str]; // ---> ami jokhon str ke letters variable er vitore spread operator er maddhome copy korbo      [...str] tokhon "sazzad" likha tir protita okkhor alada alada hoye jabe jemon ----> [ 's', 'a', 'z', 'z', 'a', 'd' ]
+// console.log(letters);
+// console.log(...str);
 
-const restaurantCopy = { ...restaurant };
-restaurantCopy.name = "Ristorante Roma";
-console.log(restaurantCopy.name);
-console.log(restaurant.name);
+// //................................
+// const ingredients = [
+//   //   prompt("Let's amke pasta! Ingredient 1?"),
+//   //   prompt("Ingredient 2?"),
+//   //   prompt("Ingredinent 3?"),
+// ];
+
+// console.log(ingredients);
+
+// restaurant.orderPasta(...ingredients);
+
+// const newRestaurant = {
+//   foundedIn: 1998,
+//   ...restaurant,
+//   founder: "Guiseppe",
+// };
+
+// console.log(newRestaurant);
+
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = "Ristorante Roma";
+// console.log(restaurantCopy.name);
+// console.log(restaurant.name);

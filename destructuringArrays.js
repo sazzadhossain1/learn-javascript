@@ -141,7 +141,30 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function (
+    starterIndex = 1,
+    mainIndex = 0,
+    time = "20:00",
+    address
+  ) {
+    console.log(
+      `Order reveived! ${this.startMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be deliverd to ${address} at ${time}`
+    );
+  },
 };
+
+restaurant.orderDelivery({
+  time: "22:30",
+  address: "Via del sole,21",
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  address: "Via del sole, 21",
+  starterIndex: 1,
+});
 
 // const arr = [1, 2, 3];
 // const [a, d, c] = arr;
@@ -177,4 +200,19 @@ const {
   openingHours: hours,
   categories: tags,
 } = restaurant;
-console.log(restaurantName, hours, tags);
+// console.log(restaurantName, hours, tags);
+
+const { startMenu: starters = [], categories: ca = [] } = restaurant;
+// console.log(starters, ca);
+
+let a = 111;
+let b = 999;
+
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b, c } = obj);
+// console.log(a, b, c);
+
+const {
+  fri: { open: o, close: cl },
+} = restaurant.openingHours;
+// console.log(o, cl);
