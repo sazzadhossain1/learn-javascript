@@ -70,14 +70,24 @@ console.log(letters);
 const [a, , , , , b] = letters;
 console.log(a, b);
 
-const ingredients = [
-  prompt("Let's make pasta! ingredeient 1?"),
-  prompt("ingredeient 2?"),
-  prompt("ingredeient 3?"),
-];
-console.log(ingredients);
+// const ingredients = [
+//   prompt("Let's make pasta! ingredeient 1?"),
+//   prompt("ingredeient 2?"),
+//   prompt("ingredeient 3?"),
+// ];
+// console.log(ingredients);
 
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
+
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "sazzad" };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = "Ristorante Roma";
+
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
