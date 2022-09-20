@@ -37,6 +37,9 @@ const restaurant = {
       `Here is your declicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
+  },
 };
 
 ////////////////////////////////////////////////
@@ -66,6 +69,15 @@ console.log(letters);
 
 const [a, , , , , b] = letters;
 console.log(a, b);
+
+const ingredients = [
+  prompt("Let's make pasta! ingredeient 1?"),
+  prompt("ingredeient 2?"),
+  prompt("ingredeient 3?"),
+];
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
