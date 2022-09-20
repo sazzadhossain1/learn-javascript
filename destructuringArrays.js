@@ -112,6 +112,7 @@
 // // --> Default Value <-- //
 // const [p = 1, q = 1, r = 1] = [8, 9];
 // console.log(p, q, r);
+
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
@@ -122,31 +123,58 @@ const restaurant = {
   categories: ["Italian", "Pizzeria", "Vegetarian", "Oranic"],
   startMenu: ["Focaccia", "Bruuschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "pasta", "Risotto"],
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    set: {
+      open: 0,
+      close: 24,
+    },
+  },
 
   order: function (starterIndex, mainIndex) {
     return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
 
-const arr = [1, 2, 3];
-const [a, d, c] = arr;
-console.log(a, d, c);
+// const arr = [1, 2, 3];
+// const [a, d, c] = arr;
+// console.log(a, d, c);
 
-let [first, , , second] = restaurant.categories;
-console.log(first, second);
+// let [first, , , second] = restaurant.categories;
+// console.log(first, second);
 
-const temp = first;
-first = second;
-second = temp;
-console.log(first, second);
+// const temp = first;
+// first = second;
+// second = temp;
+// console.log(first, second);
 
-const [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
+// const [starter, mainCourse] = restaurant.order(2, 0);
+// console.log(starter, mainCourse);
 
-const nested = [2, 4, [5, 6]];
-const [t, , [x, y]] = nested;
-console.log(t, x, y);
+// const nested = [2, 4, [5, 6]];
+// const [t, , [x, y]] = nested;
+// console.log(t, x, y);
 
-const defaul = [1, 2];
-const [q = 1, u = 1, r = 1] = defaul;
-console.log(q, u, r);
+// const defaul = [1, 2];
+// const [q = 1, u = 1, r = 1] = defaul;
+// console.log(q, u, r);
+///////////////////////////////////////////////////////////
+
+// Object Destructure //
+
+const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
