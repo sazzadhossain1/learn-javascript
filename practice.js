@@ -142,7 +142,7 @@ const { education } = user;
 const number = [1, 2, 3, 4, 5, 6];
 const [, a, , , , b] = number;
 
-console.log(a, b);
+// console.log(a, b);
 //................................
 
 // Nasted Array Destructuring //
@@ -150,4 +150,24 @@ console.log(a, b);
 const num = [1, 2, [3, 100, 500], 4, 5, 6];
 
 const [, , [, x, y], four, five, six] = num;
-console.log(x, y, four, five, six);
+// console.log(x, y, four, five, six);
+//////////////////////////////////////////
+
+const numberCopy = [...number, 7, 8, 9];
+// console.log(numberCopy);
+
+// number.push(22, 33, 44);
+// console.log(number);
+// console.log(numberCopy);
+
+const number2 = [10, 11, 12, 13];
+const addNumber = [...numberCopy, ...number2];
+console.log(addNumber);
+
+/////////////////////////////////////////////
+// --> rest paramiters  <-- //
+
+function myFun(a, ...b) {
+  console.log(a, b);
+}
+myFun(1, 2, 3, 4);
