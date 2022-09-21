@@ -100,19 +100,19 @@ const restaurant = {
 // const x = [23, 5, 7];
 // add(...x);
 
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum = sum + numbers[i];
-    console.log(sum);
-  }
-};
-const x = [10, 5, 5, 5, 10, 100];
-add(...x);
-add(10, 10);
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum = sum + numbers[i];
+//     console.log(sum);
+//   }
+// };
+// const x = [10, 5, 5, 5, 10, 100];
+// add(...x);
+// add(10, 10);
 
-restaurant.orderPizza("mushroom", "onion", "olives", "spinach");
-restaurant.orderPizza("mushroom");
+// restaurant.orderPizza("mushroom", "onion", "olives", "spinach");
+// restaurant.orderPizza("mushroom");
 
 /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
