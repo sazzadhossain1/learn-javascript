@@ -57,6 +57,44 @@ console.log(guests); // ai operator shudhu truthy value nay //
 const guestCorrect = restaurant.numGuestes ?? 10;
 console.log(guestCorrect); // ai operator (0 and "") ai 2 ta operator o nay//
 
+/////////////////////////////////////////////////////
+
+const rest1 = {
+  name: "Capri",
+  // numGuests: 20,
+  numGuestes: 0,
+};
+const rest2 = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
+};
+
+// OR assignment operator //
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuestes = rest2.numGuestes || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuestes ||= 10;
+
+console.log(rest1);
+console.log(rest2);
+
+// nullish assignment operator //
+rest1.numGuestes ??= 10;
+rest2.numGuestes = rest2.numGuestes ?? 10;
+
+console.log(rest1);
+console.log(rest2);
+
+// AND assignmnt operator //
+rest1.owner = rest1.owner && "<ANONYMOUS>";
+rest2.owner = rest2.owner && "<ANONYMOUS>";
+
+rest1.owner &&= "<ANONYMOUS>";
+rest2.owner &&= "<ANONYMOUS>";
+
+console.log(rest1);
+console.log(rest2);
 ///////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ///////////////////////////////////////////////////
