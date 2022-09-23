@@ -48,6 +48,8 @@ const restaurant = {
   },
 };
 
+//---------------------------------------//
+
 console.log("----Ro----");
 
 console.log(1 || "sazzad");
@@ -76,3 +78,5 @@ if (restaurant.orderPizza && restaurant.namGuests) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+
+///////////////////////////////////////////////////////////////

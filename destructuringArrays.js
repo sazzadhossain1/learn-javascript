@@ -170,13 +170,16 @@ restaurant.orderDelivery({
 // const [a, d, c] = arr;
 // console.log(a, d, c);
 
-// let [first, , , second] = restaurant.categories;
-// console.log(first, second);
+let [first, , , second] = restaurant.categories;
+console.log(first, second);
 
 // const temp = first;
 // first = second;
 // second = temp;
 // console.log(first, second);
+
+// [second, first] = [first, second];
+// console.log(second, first);
 
 // const [starter, mainCourse] = restaurant.order(2, 0);
 // console.log(starter, mainCourse);
