@@ -245,7 +245,7 @@ const game = {
   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
   date: "Nov 9th, 2037",
   odds: {
-    team1: 1.33,
+    team1: 11.33,
     x: 3.25,
     team2: 6.5,
   },
@@ -259,3 +259,37 @@ console.log(gk, fieldPlayer);
 
 const allPlayers = [...players1, ...players2];
 console.log(allPlayers);
+
+const playersFinal = [...players1, "Thiago", "Coutinho", "Periscic"];
+console.log(playersFinal);
+
+//---------------------------//
+
+// const { team1, x, team2 } = game.odds;
+// console.log(team1, x, team2);
+
+//same think in another way //
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+
+console.log(team1, draw, team2);
+
+//----------------------------//
+
+const printGoals = function (...players) {
+  console.log(`${players.length} goasl were scored`);
+};
+
+printGoals("Devies", "Muller", "Lewandowski", "kimmich");
+printGoals("Davies", "Muller");
+printGoals(...game.scored);
+
+//----------------------------//
+
+team1 < team2 && console.log("Team 1 is more likely to win");
+team1 > team2 && console.log("Team 2 is more likely to win");
+
+// team1: 1.33,
+// x: 3.25,
+// team2: 6.5,
