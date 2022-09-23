@@ -65,3 +65,20 @@ for (const day of days) {
   const closed = restaurant.openingHours[day]?.close ?? "This shop is off";
   console.log(`On ${day},shop is closed at ${closed}`);
 }
+//---------------------------//
+
+console.log(restaurant.order?.(0, 1) ?? "Method does not exist");
+console.log(restaurant.orderRisotto?.(0, 1) ?? "Method does not exist");
+
+const users = [
+  { name: "Sazzad", email: "sazzad1@gmail.com" },
+  { name: "Hossain", email: "hossain1@gmail.com" },
+  { name: "Tomal", email: "tomal1@gmail.com" },
+];
+console.log(users[3]?.email ?? "User array empty");
+
+if (users.length >= 3) {
+  console.log(users[3]?.name);
+} else {
+  console.log("User array empty");
+}
