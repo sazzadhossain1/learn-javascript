@@ -171,3 +171,16 @@ function myFun(a, ...b) {
   console.log(a, b);
 }
 myFun(1, 2, 3, 4);
+
+// challange by google meet ---> parinai //
+// const num = [1, 2, 3, 4, 5];
+
+// function number(arr, index) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.length >= 5) {
+//       console.log(arr[i]);
+//     }
+//   }
+// }
+
+// number(num, 3);
