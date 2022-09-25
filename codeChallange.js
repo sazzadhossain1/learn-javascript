@@ -208,8 +208,99 @@ checkWinner(scoreDolphin, scoreKoalas);
 // 09 Data Structures, Modern Operators and Strings //
 // coding challange - 1 //
 
+// const game = {
+//   team1: "Bavern Munich",
+//   team2: "Borrussia Dortmund",
+//   players: [
+//     [
+//       "Neuer",
+//       "Pavard",
+//       "Martinez",
+//       "Alaba",
+//       "Davies",
+//       "Kimmich",
+//       "Goretzka",
+//       "Coman",
+//       "Muller",
+//       "Gnarby",
+//       "Lewandowski",
+//     ],
+
+//     [
+//       "Burki",
+//       "Schulz",
+//       "Hummels",
+//       "Akanji",
+//       "Hakimi",
+//       "weigl",
+//       "Witesel",
+//       "Hazard",
+//       "Brandt",
+//       "sancho",
+//       "Gotze",
+//     ],
+//   ],
+
+//   score: "4:0",
+//   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+//   date: "Nov 9th, 2037",
+//   odds: {
+//     team1: 11.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// const [players1, players2] = game.players;
+// // console.log(players1, players2);
+
+// const [gk, ...fieldPlayer] = players1;
+// console.log(gk, fieldPlayer);
+
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
+
+// const playersFinal = [...players1, "Thiago", "Coutinho", "Periscic"];
+// console.log(playersFinal);
+
+// //---------------------------//
+
+// // const { team1, x, team2 } = game.odds;
+// // console.log(team1, x, team2);
+
+// //same think in another way //
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+
+// console.log(team1, draw, team2);
+
+// //----------------------------//
+
+// const printGoals = function (...players) {
+//   console.log(`${players.length} goasl were scored`);
+// };
+
+// printGoals("Devies", "Muller", "Lewandowski", "kimmich");
+// printGoals("Davies", "Muller");
+// printGoals(...game.scored);
+
+// //----------------------------//
+
+// team1 < team2 && console.log("Team 1 is more likely to win");
+// team1 > team2 && console.log("Team 2 is more likely to win");
+
+// // team1: 1.33,
+// // x: 3.25,
+// // team2: 6.5,
+
+////////////////////////////////////////////////////
+
+// 09 Data Structures, Modern Operators and Strings //
+// coding challange - 2 //
+
 const game = {
-  team1: "Bavern Munich",
+  team1: "Bayern Munich",
   team2: "Borrussia Dortmund",
   players: [
     [
@@ -225,71 +316,36 @@ const game = {
       "Gnarby",
       "Lewandowski",
     ],
-
     [
       "Burki",
       "Schulz",
       "Hummels",
       "Akanji",
       "Hakimi",
-      "weigl",
-      "Witesel",
+      "Weigl",
+      "Witsel",
       "Hazard",
       "Brandt",
-      "sancho",
+      "Sancho",
       "Gotze",
     ],
   ],
-
   score: "4:0",
   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
   date: "Nov 9th, 2037",
   odds: {
-    team1: 11.33,
+    team1: 1.33,
     x: 3.25,
     team2: 6.5,
   },
 };
+// 1.
+for (const [i, loopingPlayers] of game.scored.entries()) {
+  console.log(`Gool : ${i} ${loopingPlayers}`);
+}
 
-const [players1, players2] = game.players;
-// console.log(players1, players2);
+// 2.
 
-const [gk, ...fieldPlayer] = players1;
-console.log(gk, fieldPlayer);
-
-const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
-
-const playersFinal = [...players1, "Thiago", "Coutinho", "Periscic"];
-console.log(playersFinal);
-
-//---------------------------//
-
-// const { team1, x, team2 } = game.odds;
-// console.log(team1, x, team2);
-
-//same think in another way //
-const {
-  odds: { team1, x: draw, team2 },
-} = game;
-
-console.log(team1, draw, team2);
-
-//----------------------------//
-
-const printGoals = function (...players) {
-  console.log(`${players.length} goasl were scored`);
-};
-
-printGoals("Devies", "Muller", "Lewandowski", "kimmich");
-printGoals("Davies", "Muller");
-printGoals(...game.scored);
-
-//----------------------------//
-
-team1 < team2 && console.log("Team 1 is more likely to win");
-team1 > team2 && console.log("Team 2 is more likely to win");
-
-// team1: 1.33,
-// x: 3.25,
-// team2: 6.5,
+for (const odd of Object.values(game.odds)) {
+  console.log(odd);
+}
