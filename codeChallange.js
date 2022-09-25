@@ -345,7 +345,12 @@ for (const [i, loopingPlayers] of game.scored.entries()) {
 }
 
 // 2.
-
-for (const odd of Object.values(game.odds)) {
-  console.log(odd);
+const odds = Object.values(game.odds);
+let avg = 0;
+for (const odd of odds) {
+  avg += odd;
+  avg /= odds.length;
+  console.log(avg);
 }
+
+// 3.
