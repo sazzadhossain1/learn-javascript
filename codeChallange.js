@@ -360,6 +360,11 @@ for (const odd of odds) {
 //   console.log(`Odd fo ${teamStr} ${odd}`);
 // }
 
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === "x" ? "Draw" : `Victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
+
 for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === "x" ? "Draw" : `Victory ${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
