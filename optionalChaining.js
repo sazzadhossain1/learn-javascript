@@ -47,27 +47,64 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-const days = ["mon", "tue", "wed", "thu", "fri", "set", "sun"];
+// const days = ["mon", "tue", "wed", "thu", "fri", "set", "sun"];
 
-for (const day of days) {
-  const open = restaurant.openingHours[day]?.open ?? "Closed";
-  console.log(`On ${day}, we open at ${open}`);
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open ?? "Closed";
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+// // Methods //
+
+// console.log(restaurant.order?.(0, 1) ?? "Method does not exist");
+// console.log(restaurant.orderRisotto?.(0, 1) ?? "Method does not exist");
+// const users = [
+//   { name: "Sazzad", email: "sazzad1@gmail.com" },
+//   { name: "Hossain", email: "hossain1@gmail.com" },
+//   { name: "Tomal", email: "tomal1@gmail.com" },
+// ];
+
+// console.log(users[0]?.name ?? "User array empty");
+// console.log(users[1]?.name ?? "User array empty");
+// console.log(users[2]?.name ?? "User array empty");
+
+// if (users.length > 5) {
+//   console.log(users[0].name);
+// } else {
+//   console.log("User array empty");
+// }
+
+/////////////////////////////////////////////////
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+
+const days1 = ["mon", "tue", "wed", "thu", "fri", "set", "sun"];
+
+for (const day1 of days1) {
+  const openValue = restaurant.openingHours[day1]?.open ?? "Closed";
+  console.log(`On ${day1}, Open at ${openValue}`);
 }
 
-// Methods //
+// Methode //
+console.log(restaurant.order?.(0, 1) ?? "Methode dose not exsit");
+console.log(restaurant.orderResodo?.(0, 1) ?? "Methode dose not exsit");
 
-console.log(restaurant.order?.(0, 1) ?? "Method does not exist");
-console.log(restaurant.orderRisotto?.(0, 1) ?? "Method does not exist");
 const users = [
   { name: "Sazzad", email: "sazzad1@gmail.com" },
   { name: "Hossain", email: "hossain1@gmail.com" },
   { name: "Tomal", email: "tomal1@gmail.com" },
 ];
 
-console.log(users[0]?.name ?? "User array empty");
-console.log(users[1]?.name ?? "User array empty");
-console.log(users[2]?.name ?? "User array empty");
+// console.log(users[0]?.email ?? "Emain dose not exsist");
+// console.log(users[1]?.email ?? "Email dose not exsist");
+// console.log(users[2]?.email ?? "Email dose not exsist");
+// console.log(users[3]?.email ?? "Email dose not exsist");
 
+if (users.length >= 4) {
+  console.log(users[4]?.email);
+} else {
+  console.log(" User array empty");
+}
 //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////

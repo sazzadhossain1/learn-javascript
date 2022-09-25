@@ -48,58 +48,89 @@ const restaurant = {
   },
 };
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
-for (const item of menu) {
-  console.log(item);
-}
+const properties = Object.keys(openingHours);
+console.log(properties);
 
-for (const [i, el] of menu.entries()) {
-  console.log(`${i + 1}: ${el}`);
-}
-// console.log(..  .menu.entries());
-//-----------------------------------//
+const propertiesValut = Object.values(openingHours);
+console.log(propertiesValut);
 
-const x = ["sazzad", "hossain", "tomal"];
-for (let y of x) {
-  console.log(y);
-}
+let = openStr = `we are  open on ${properties.length} days:`;
 
-const number = [10, 11, 12, 13];
-for (let num of number) {
-  console.log(num);
+for (const day of properties) {
+  openStr += `${day},`;
 }
+// console.log(openStr);
 
-const person = {
-  name: "Sazzad",
-  profession: "Web developer",
-  id: 1,
-  address: "dhaka",
-};
+const entries = Object.entries(openingHours);
+// console.log(entries);
 
-for (let x in person) {
-  console.log(`${x} : ${person[x]}`);
+// [ket , value]
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} we open it ${open} and close at ${close}`);
 }
+// for (day of Object.keys(openingHours)) {
+//   console.log(day);
+// }
 
-for (let n of number) {
-  console.log(n);
-}
+// for (day of Object.values(openingHours)) {
+//   console.log(day);
+// }
 
-for (let b in person) {
-  console.log(b, ":", person[b]);
-}
+//////////////////////////////////////
+////////////////////////////////////////
+//////////////////////////////////////////
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// for (const item of menu) {
+//   console.log(item);
+// }
 
-for (let b in person) {
-  console.log(`${b} : ${person[b]}`);
-}
+// for (const [i, el] of menu.entries()) {
+//   console.log(`${i + 1}: ${el}`);
+// }
+// // console.log(..  .menu.entries());
+// //-----------------------------------//
 
-for (let i of restaurant.starterMenu) {
-  console.log(i);
-}
+// const x = ["sazzad", "hossain", "tomal"];
+// for (let y of x) {
+//   console.log(y);
+// }
 
-for (let y in restaurant) {
-  console.log(`${y} : ${restaurant[y]}`);
-}
+// const number = [10, 11, 12, 13];
+// for (let num of number) {
+//   console.log(num);
+// }
 
-for (let o in restaurant.openingHours.thu) {
-  console.log(o, ":", restaurant.openingHours.thu[o]);
-}
+// const person = {
+//   name: "Sazzad",
+//   profession: "Web developer",
+//   id: 1,
+//   address: "dhaka",
+// };
+
+// for (let x in person) {
+//   console.log(`${x} : ${person[x]}`);
+// }
+
+// for (let n of number) {
+//   console.log(n);
+// }
+
+// for (let b in person) {
+//   console.log(b, ":", person[b]);
+// }
+
+// for (let b in person) {
+//   console.log(`${b} : ${person[b]}`);
+// }
+
+// for (let i of restaurant.starterMenu) {
+//   console.log(i);
+// }
+
+// for (let y in restaurant) {
+//   console.log(`${y} : ${restaurant[y]}`);
+// }
+
+// for (let o in restaurant.openingHours.thu) {
+//   console.log(o, ":", restaurant.openingHours.thu[o]);
+// }
