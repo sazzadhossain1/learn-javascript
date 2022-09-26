@@ -162,13 +162,13 @@ const numberCopy = [...number, 7, 8, 9];
 
 const number2 = [10, 11, 12, 13];
 const addNumber = [...numberCopy, ...number2];
-console.log(addNumber);
+// console.log(addNumber);
 
 /////////////////////////////////////////////
 // --> rest paramiters  <-- //
 
 function myFun(a, ...b) {
-  console.log(a, b);
+  // console.log(a, b);
 }
 myFun(1, 2, 3, 4);
 
@@ -184,3 +184,18 @@ myFun(1, 2, 3, 4);
 // }
 
 // number(num, 3);
+
+function makeBuilding() {
+  let oneFit = 1000;
+  let fiftenFit = oneFit * 15;
+  let oneToTen = fiftenFit * 10;
+  console.log(oneToTen);
+
+  let twelve = oneFit * 12;
+  let elevenToForty = twelve * 30;
+  console.log(elevenToForty);
+  const totalBrick = oneToTen + elevenToForty;
+  console.log(totalBrick);
+}
+
+makeBuilding();
