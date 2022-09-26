@@ -1,15 +1,30 @@
-const fruits = new Map();
+// youtube er shumit vai er theke kora //
 
-fruits.set("apples", 500);
-fruits.set("bananas", 300);
-fruits.set("oranges", 300);
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200],
+]);
 
-console.log(fruits);
+let text = "";
+for (const x of fruits.entries()) {
+  text = text + x;
+  console.log(x);
+}
 
-const siz = fruits.size;
-console.log(siz);
-fruits.delete("apples");
-console.log(fruits);
+console.log(text);
+// const fruits = new Map();
 
-fruits.has("bananas");
-console.log(fruits);
+// fruits.set("apples", 500);
+// fruits.set("bananas", 300);
+// fruits.set("oranges", 300);
+
+// console.log(fruits);
+
+// const siz = fruits.size;
+// console.log(siz);
+// fruits.delete("apples");
+// console.log(fruits);
+
+// const trueAndFalse = fruits.has("bananas");
+// console.log(trueAndFalse);
