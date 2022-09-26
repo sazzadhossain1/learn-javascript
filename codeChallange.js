@@ -378,3 +378,7 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === "x" ? "Draw" : `Victory ${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
 }
+
+const number = [11, 11, 11, 22, 22, 22, 33, 33, 3];
+const unq = new Set(number);
+console.log(unq);
