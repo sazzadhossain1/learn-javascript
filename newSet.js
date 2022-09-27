@@ -34,6 +34,7 @@
 ///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
+
 // youtube shumit vai er theke kora //
 // const ordersSet = new Set([
 //   "Pasta",
@@ -64,7 +65,25 @@
 
 // console.log(letters.values());
 
-let myArray = new Set();
-console.log(myArray);
-myArray.add("sazzad");
-console.log(myArray);
+// let myArray = new Set();
+// console.log(myArray);
+// myArray.add("sazzad");
+// console.log(myArray);
+
+//////////////////////////////////////////////////
+/////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+// youtube chanal ---> CODE ABC //
+
+// let arr = [2, 3, 4, 5, 66, 66, 66, 77, 4, 3, 2];
+// let set = new Set(arr);
+// let setTwo = set.has(2);
+// console.log(setTwo);
+
+function removeDuplicate(...arr) {
+  let st = new Set(arr);
+  return [...st];
+}
+
+console.log(removeDuplicate(22, 22, 22, 33, 33, 44, 44, 55, 55));
