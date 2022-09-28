@@ -89,8 +89,8 @@ const question = new Map([
   [1, "C"],
   [2, "Java"],
   [3, "JavaScript"],
-  ["Correct", 3],
-  [true, "Correct"],
+  ["correct", 3],
+  [true, "You ara correct"],
   [false, "Try again"],
 ]);
 console.log(question);
@@ -98,6 +98,32 @@ console.log(question);
 console.log(Object.entries(openingHours));
 const hoursMap = new Map(Object.entries(openingHours));
 console.log(hoursMap);
+
+// Quiz app //
+console.log(question.get("question"));
+
+for (const [key, value] of question) {
+  if (typeof key === "number") {
+    console.log(`Answer ${key} : ${value}`);
+  }
+}
+// const answer = Number(prompt("Your answer"));
+// console.log(answer);
+let answer = 3;
+console.log(answer);
+
+const getAnswer = question.get(question.get("correct") === answer);
+console.log(getAnswer);
+
+// if (question.get("correct") === answer) {
+//   console.log(question.get(true));
+// } else {
+//   console.log(question.get(false));
+// }
+console.log(...question);
+// console.log(question.entries());
+console.log(...question.keys());
+console.log(...question.values());
 ///////////////////////////////////////////////
 //==========================================//
 /////////////////////////////////////////////

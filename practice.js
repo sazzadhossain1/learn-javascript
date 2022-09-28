@@ -185,17 +185,24 @@ myFun(1, 2, 3, 4);
 
 // number(num, 3);
 
-function makeBuilding() {
-  let oneFit = 1000;
-  let fiftenFit = oneFit * 15;
-  let oneToTen = fiftenFit * 10;
-  console.log(oneToTen);
+const arr1 = [1, 1, 2, 3, 4, 5, 6];
+const arr2 = new Set([1, 11, 22, 3, 33, 3, 11, 22]);
+console.log(arr2);
+for (const i of arr2) {
+  console.log(i * 10);
+}
+arr2.add("Hello");
+arr2.add("Sazzad");
+arr2.add("Hossain");
+arr2.add("Tomal");
+arr2.add("Shoikot");
+arr2.delete("Shoikot");
+console.log(arr2);
 
-  let twelve = oneFit * 12;
-  let elevenToForty = twelve * 30;
-  console.log(elevenToForty);
-  const totalBrick = oneToTen + elevenToForty;
-  console.log(totalBrick);
+for (const x of arr2) {
+  console.log(x);
 }
 
-makeBuilding();
+const convertSet = new Set(arr1);
+console.log(convertSet);
+console.log(arr2);
