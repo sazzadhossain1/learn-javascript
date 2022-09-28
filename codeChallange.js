@@ -412,4 +412,10 @@ console.log(events);
 gameEvents.delete(64);
 console.log(gameEvents);
 
+// third - 3 bonous part //
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+
 // Third - 3 //
+const minutes = `An event happend, on average, every ${time / gameEvents.size}`;
+console.log(minutes);
