@@ -340,18 +340,18 @@ const game = {
   },
 };
 // 1.
-for (const [i, loopingPlayers] of game.scored.entries()) {
-  console.log(`Gool : ${i} ${loopingPlayers}`);
-}
+// for (const [i, loopingPlayers] of game.scored.entries()) {
+//   console.log(`Gool : ${i} ${loopingPlayers}`);
+// }
 
 // 2.
-const odds = Object.values(game.odds);
-let avg = 0;
-for (const odd of odds) {
-  avg += odd;
-  avg /= odds.length;
-  console.log(avg);
-}
+// const odds = Object.values(game.odds);
+// let avg = 0;
+// for (const odd of odds) {
+//   avg += odd;
+//   avg /= odds.length;
+//   console.log(avg);
+// }
 
 // 3.
 // for (const [team, odd] of Object.entries(game.odds)) {
@@ -374,11 +374,42 @@ for (const odd of odds) {
 // }
 //-----------------------------
 
-for (const [team, odd] of Object.entries(game.odds)) {
-  const teamStr = team === "x" ? "Draw" : `Victory ${game[team]}`;
-  console.log(`Odd of ${teamStr} ${odd}`);
-}
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === "x" ? "Draw" : `Victory ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
 
 const number = [11, 11, 11, 22, 22, 22, 33, 33, 3];
 const unq = new Set(number);
-console.log(unq);
+// console.log(unq);
+
+////////////////////////////////////////////////////////////////
+//...........................................................//
+//////////////////////////////////////////////////////////////
+
+// 09 Data Structures, Modern Operators and Strings //
+// coding challange - 3 //
+
+const gameEvents = new Map([
+  [17, "⚽ GOAL"],
+  [36, "� Substitution"],
+  [47, "⚽ GOAL"],
+  [61, "� Substitution"],
+  [64, "� Yellow card"],
+  [69, "� Red card"],
+  [70, "� Substitution"],
+  [72, "� Substitution"],
+  [76, "⚽ GOAL"],
+  [80, "⚽ GOAL"],
+  [92, "� Yellow card"],
+]);
+
+// First - 1 //
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+// Second - 2 //
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// Third - 3 //

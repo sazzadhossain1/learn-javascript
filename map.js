@@ -159,6 +159,18 @@ console.log(...question.values());
 // }
 
 // console.log(text);
+
+const fruits = new Map();
+fruits.set("bananas", 300);
+fruits.set("apple", 500);
+fruits.set("orange", 1000);
+// console.log(fruits);
+fruits.delete("apple");
+// const s = fruits.size;
+// const exist = fruits.has("orange");
+// const exist = fruits.has("apple");
+// console.log(fruits);
+console.log(fruits instanceof Map); // ====> instanceof diye atir type ti jana jabe //
 ///////////////////////////////////////////
 //......................................//
 //////////////////////////////////////////
@@ -242,3 +254,7 @@ console.log(...question.values());
 
 // const index = items.get(2);
 // console.log(index);
+
+/////////////////////////////////////////////////////
+//------------------------------------------------//
+///////////////////////////////////////////////////
