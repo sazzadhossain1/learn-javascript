@@ -107,14 +107,7 @@
 // Lear with shumit vai//
 // Destructuring Object//
 
-const user = {
-  id: 339,
-  name: "Sakib",
-  age: 35,
-  education: {
-    degree: "Masters",
-  },
-};
+// s
 
 // const { id: i, name: n, age: a } = user;
 // const userId = i;
@@ -124,7 +117,7 @@ const user = {
 /////////////////////////
 
 // Nasted Object destructuring //
-const { education } = user;
+// const { education } = user;
 // const { degree } = education;
 // console.log(degree); // --> ai same kaj ti arek vabe kora jay //
 //...........................
@@ -139,38 +132,38 @@ const { education } = user;
 
 // Array Destructuring //
 
-const number = [1, 2, 3, 4, 5, 6];
-const [, a, , , , b] = number;
+// const number = [1, 2, 3, 4, 5, 6];
+// const [, a, , , , b] = number;
 
 // console.log(a, b);
 //................................
 
 // Nasted Array Destructuring //
 
-const num = [1, 2, [3, 100, 500], 4, 5, 6];
+// const num = [1, 2, [3, 100, 500], 4, 5, 6];
 
-const [, , [, x, y], four, five, six] = num;
+// const [, , [, x, y], four, five, six] = num;
 // console.log(x, y, four, five, six);
 //////////////////////////////////////////
 
-const numberCopy = [...number, 7, 8, 9];
+// const numberCopy = [...number, 7, 8, 9];
 // console.log(numberCopy);
 
 // number.push(22, 33, 44);
 // console.log(number);
 // console.log(numberCopy);
 
-const number2 = [10, 11, 12, 13];
-const addNumber = [...numberCopy, ...number2];
+// const number2 = [10, 11, 12, 13];
+// const addNumber = [...numberCopy, ...number2];
 // console.log(addNumber);
 
 /////////////////////////////////////////////
 // --> rest paramiters  <-- //
 
-function myFun(a, ...b) {
-  // console.log(a, b);
-}
-myFun(1, 2, 3, 4);
+// function myFun(a, ...b) {
+//   // console.log(a, b);
+// }
+// myFun(1, 2, 3, 4);
 
 // challange by google meet ---> parinai //
 // const num = [1, 2, 3, 4, 5];
@@ -185,24 +178,118 @@ myFun(1, 2, 3, 4);
 
 // number(num, 3);
 
-const arr1 = [1, 1, 2, 3, 4, 5, 6];
-const arr2 = new Set([1, 11, 22, 3, 33, 3, 11, 22]);
-console.log(arr2);
-for (const i of arr2) {
-  console.log(i * 10);
-}
-arr2.add("Hello");
-arr2.add("Sazzad");
-arr2.add("Hossain");
-arr2.add("Tomal");
-arr2.add("Shoikot");
-arr2.delete("Shoikot");
-console.log(arr2);
+// const arr1 = [1, 1, 2, 3, 4, 5, 6];
+// const arr2 = new Set([1, 11, 22, 3, 33, 3, 11, 22]);
+// console.log(arr2);
+// for (const i of arr2) {
+//   console.log(i * 10);
+// }
+// arr2.add("Hello");
+// arr2.add("Sazzad");
+// arr2.add("Hossain");
+// arr2.add("Tomal");
+// arr2.add("Shoikot");
+// arr2.delete("Shoikot");
+// console.log(arr2);
 
-for (const x of arr2) {
-  console.log(x);
-}
+// for (const x of arr2) {
+//   console.log(x);
+// }
 
-const convertSet = new Set(arr1);
-console.log(convertSet);
-console.log(arr2);
+// const convertSet = new Set(arr1);
+// console.log(convertSet);
+// console.log(arr2);
+
+// function brickCount(parFloor) {
+//   const perFit = 1000;
+//   const first10TotalFloor = 15;
+//   const secondTotalFloor = 12;
+//   if (parFloor <= 10) {
+//     const totalFloorFeet = parFloor * first10TotalFloor;
+//     console.log(totalFloorFeet);
+//     const totalBrick = totalFloorFeet * perFit;
+//     console.log(totalBrick);
+//   } else if (parFloor <= 40) {
+//     const first10Floor = 10 * first10TotalFloor;
+//     const total = first10Floor * perFit;
+
+//     const totalFloorFeet = parFloor * secondTotalFloor;
+//     const first10Minus = totalFloorFeet - first10Floor;
+//     const totalBrick = first10Minus * perFit;
+
+//     const totalBrickResult = total + totalBrick;
+
+//     console.log(totalBrickResult);
+//   }
+// }
+
+// brickCount(40);
+
+// for (let i = 1; i < 20; i++) {
+//   if (i % 3 == 0 && i % 5 == 0) {
+//     console.log("sazzad the choto vai of nasir vai");
+//   } else if (i % 3 == 0) {
+//     console.log("sazzad");
+//   } else if (i % 5 == 0) {
+//     console.log("nasir vai");
+//   } else {
+//     console.log(i);
+//   }
+// }
+//---------------------------------//
+// let userName = prompt("Enter your name");
+// let userName2 =  "Blank user name";
+// let userName3 =  userName2 ||
+
+// if (userName == userName || userName2 == userName2) {
+//   alert("login done");
+// } else {
+//   alert("Blank user name");
+// }
+
+//------------------------------------------//
+// while loop //
+// let i = 10;
+// while (i > 0) {
+//   console.log(i);
+//   i--;
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i == 5) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+// let number1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// // number1[1] = 30;
+// // console.log(number1);
+
+// // let num1 = number1.length;
+// // console.log(num1);
+
+// // number1.shift();
+// // number1.unshift(12);
+// number1.splice(4, 1);
+// console.log(number1);
+
+// let first = 10;
+// let second = 20;
+
+// let team = first;
+// first = second;
+
+// second = team;
+// console.log(first, second);
+
+// [first, second] = [second, first];
+// console.log(first, second);
+//-----------------------------------------//
+// Task - 1 //
+
+const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (let i = 0; i < number.length; i++) {
+  let add = number[i] + i;
+  console.log(add);
+}
