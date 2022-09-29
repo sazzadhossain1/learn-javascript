@@ -404,18 +404,59 @@ const gameEvents = new Map([
   [92, "� Yellow card"],
 ]);
 
-// First - 1 //
 const events = [...new Set(gameEvents.values())];
 console.log(events);
+/--------------------------------/;
 
-// Second - 2 //
 gameEvents.delete(64);
 console.log(gameEvents);
+/==================================/;
 
-// third - 3 bonous part //
-const time = [...gameEvents.keys()].pop();
+const time = [...gameEvents.keys()];
 console.log(time);
 
-// Third - 3 //
-const minutes = `An event happend, on average, every ${time / gameEvents.size}`;
+const index = time.indexOf(92);
+console.log(index);
+
+const minutes = `An event happend, on average, every ${
+  time[9] / gameEvents.size
+}`;
 console.log(minutes);
+/================================/;
+for (const [key, value] of gameEvents) {
+  if (key <= 45) {
+    console.log("First", `${key} : ${value}`);
+  } else {
+    console.log("Scond", `${key} : ${value}`);
+  }
+}
+// // First - 1 //
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
+
+// // Second - 2 //
+// gameEvents.delete(64);
+// console.log(gameEvents);
+
+// // third - 3 bonous part //
+// const time = [...gameEvents.keys()];
+// console.log(time);
+
+// const index = time.indexOf(92);
+// console.log(index);
+
+// // Third - 3 //
+
+// const minutes = `An event happend, on average, every ${
+//   time[9] / gameEvents.size
+// }`;
+// console.log(minutes);
+
+// // Forth - 4 //
+// for (const [keys, values] of gameEvents) {
+//   if (keys <= 45) {
+//     console.log("First", `${keys}:${values}`);
+//   } else {
+//     console.log("Second", `${keys}:${values}`);
+//   }
+// }
