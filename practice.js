@@ -288,8 +288,28 @@
 //-----------------------------------------//
 // Task - 1 //
 
-const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (let i = 0; i < number.length; i++) {
-  let add = number[i] + i;
-  console.log(add);
+const number = [2, 3, 4, 5, 6, 700, 8, 9, 10];
+// for (let i = 0; i < number.length; i++) {
+//   let add = number[i] + i;
+//   console.log(add);
+// }
+
+// const maxNumber = Math.max(...number);
+// console.log(maxNumber);
+
+// let maxNumber = [0];
+let minNumber = [0];
+
+for (num of number) {
+  // if (num > maxNumber) {
+  //   maxNumber = num;
+  // }
+  if (num < minNumber) {
+    minNumber = num;
+  }
 }
+// console.log(maxNumber);
+console.log(minNumber);
+
+// const minNumber = Math.min(...number);
+// console.log(minNumber);

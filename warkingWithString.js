@@ -27,3 +27,33 @@ console.log(airIndex);
 
 airIndex = airline.indexOf("portugal");
 console.log(airIndex);
+
+console.log(airline.slice(8));
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(" ")));
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+
+console.log(airline.slice(-3));
+console.log(airline.slice(1, -3));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats //
+  const s = seat.slice(-1);
+  if (s === "B" || s === "C") {
+    console.log("You got the middle seat");
+  } else {
+    console.log("You got lucky");
+  }
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
+
+console.log(new String("Sazzad"));
+console.log(typeof new String("Sazzad"));
+
+console.log(new String("Sazzad").slice(1));
+console.log(typeof new String("Sazzad").slice(1));
+console.log(typeof new String("Sazzad").slice(-1));
