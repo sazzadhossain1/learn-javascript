@@ -74,7 +74,7 @@ const passenger = "saZaAd";
 const passengeLower = passenger.toLowerCase();
 // console.log(passengeLower);
 const passengerCorect = passengeLower[0].toUpperCase() + passengeLower.slice(1);
-console.log(passengerCorect);
+// console.log(passengerCorect);
 
 // Comparing Email //
 const email = "hello@sazzad.io";
@@ -88,19 +88,36 @@ const loginEmail = "  Hello@sazzad.Io \n";
 // console.log(trimmedEmail);
 
 const normalizedEmail = loginEmail.toLowerCase().trim();
-console.log(normalizedEmail);
+// console.log(normalizedEmail);
 
 // Replacing //
 
 const priceGB = "288,97";
 const priceUs = priceGB.replace("97", "55$").replace(",", ".");
-console.log(priceUs);
+// console.log(priceUs);
 
 const annoouncement =
   "All passengers come to boarding door 23. Boarding door 23";
 // console.log(annoouncement);
 const replaceAnnouncement = annoouncement.replace("door", "gate");
-console.log(replaceAnnouncement);
+// console.log(replaceAnnouncement);
+
+const replaceDoors = annoouncement.replace(/door/g, "dorja");
+// console.log(replaceDoors);
 
 const replaceDoor = annoouncement.replaceAll("door", "Geat");
-console.log(replaceDoor);
+// console.log(replaceDoor);
+
+// Booleans //
+const plane = "Airbus A320neo";
+console.log(plane.includes("A320"));
+console.log(plane.includes("Booing"));
+console.log(plane.startsWith("A320"));
+console.log(plane.startsWith("Air"));
+console.log(plane.endsWith("Air"));
+console.log(plane.endsWith("A320"));
+console.log(plane.endsWith("neo"));
+
+if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
+  console.log("part of the NEW Airbus family");
+}
