@@ -70,3 +70,22 @@ console.log(airline.toUpperCase());
 console.log(airline.toLowerCase());
 
 // Fix capitalization in name //
+const passenger = "saZaAd";
+const passengeLower = passenger.toLowerCase();
+// console.log(passengeLower);
+const passengerCorect = passengeLower[0].toUpperCase() + passengeLower.slice(1);
+console.log(passengerCorect);
+
+// Comparing Email //
+const email = "hello@sazzad.io";
+const loginEmail = "  Hello@sazzad.Io \n";
+// console.log(loginEmail);
+
+// const lowerEmail = loginEmail.toLowerCase();
+// console.log(lowerEmail);
+
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
