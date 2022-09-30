@@ -121,3 +121,30 @@ console.log(plane.endsWith("neo"));
 if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
   console.log("part of the NEW Airbus family");
 }
+
+// Practice exercise //
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   if (baggage.includes("knife") || baggage.includes("gun")) {
+//     console.log("You are not allowed on board");
+//   } else {
+//     console.log("Welcome to the Board");
+//   }
+// };
+
+// checkBaggage("I have a laptop, some Food and a pocket Knife");
+// checkBaggage("Socks and camera");
+// checkBaggage("Got some snacks and a gun for protection");
+
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes("knife") || baggage.includes("gun")) {
+    console.log("You are not allowed on bord");
+  } else {
+    console.log("Welcome to the board");
+  }
+};
+
+checkBaggage("I have a laptop, some Food and a pocket Knife");
+checkBaggage("Socks and camera");
+checkBaggage("Got some snacks and a gun for protection");
