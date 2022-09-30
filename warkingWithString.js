@@ -89,3 +89,18 @@ const loginEmail = "  Hello@sazzad.Io \n";
 
 const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
+
+// Replacing //
+
+const priceGB = "288,97";
+const priceUs = priceGB.replace("97", "55$").replace(",", ".");
+console.log(priceUs);
+
+const annoouncement =
+  "All passengers come to boarding door 23. Boarding door 23";
+// console.log(annoouncement);
+const replaceAnnouncement = annoouncement.replace("door", "gate");
+console.log(replaceAnnouncement);
+
+const replaceDoor = annoouncement.replaceAll("door", "Geat");
+console.log(replaceDoor);
