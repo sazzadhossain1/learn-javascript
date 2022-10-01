@@ -180,3 +180,37 @@ const newName1 = [
   lastName[0].toUpperCase() + lastName.toLowerCase().slice(1),
 ].join(" ");
 console.log(newName1);
+
+const capitalizeName = function (name) {
+  const names = name.split(" ");
+  // console.log(names);
+  const namesUpper = [];
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    // another way //
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join("------ "));
+};
+
+capitalizeName("jessica an smith davis");
+capitalizeName("sazzad hoaasin tomalo");
+
+const sazzad = "sazzad hossain tomal";
+const yeasin = "sha mohammad yeasin hossain";
+const jannat = "umme khadijatul jannat";
+
+function capitalName(name) {
+  const names = name.split(" ");
+  // console.log(names);
+  const newName = [];
+  for (const n of names) {
+    newName.push(n[0].toUpperCase() + n.slice(1));
+  }
+  const jo = newName.join(" ");
+  console.log(jo);
+}
+
+capitalName(sazzad);
+capitalName(yeasin);
+capitalName(jannat);
