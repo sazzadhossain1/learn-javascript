@@ -148,3 +148,35 @@ const checkBaggage = function (items) {
 checkBaggage("I have a laptop, some Food and a pocket Knife");
 checkBaggage("Socks and camera");
 checkBaggage("Got some snacks and a gun for protection");
+
+///////////////////////////////////////////////////////
+//--------------------------------------------------//
+/////////////////////////////////////////////////////
+
+// -----> Warking with staring part - 3 <---- //
+
+// // Split and Join //
+
+// Youtube sorces //
+// const str = "Muhammad sazzad hossain tomal";
+// const strArray = str.split(" ");
+// console.log(strArray);
+
+////////////////////////////////////////////////
+
+console.log("a+very+nice+string".split("+"));
+console.log("sazzad hossain".split(" "));
+
+const [firstName, lastName] = "SaZzad TOmaL".split(" ");
+console.log(firstName, lastName);
+console.log(typeof firstName, typeof lastName);
+
+// const newName = [firstName,lastName];
+// console.log(newName);
+
+const newName1 = [
+  "Mr.",
+  firstName[0].toUpperCase() + firstName.toLowerCase().slice(1),
+  lastName[0].toUpperCase() + lastName.toLowerCase().slice(1),
+].join(" ");
+console.log(newName1);
