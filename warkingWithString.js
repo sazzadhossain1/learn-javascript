@@ -181,20 +181,20 @@ const newName1 = [
 ].join(" ");
 console.log(newName1);
 
-const capitalizeName = function (name) {
-  const names = name.split(" ");
-  // console.log(names);
-  const namesUpper = [];
-  for (const n of names) {
-    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
-    // another way //
-    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
-  }
-  console.log(namesUpper.join("------ "));
-};
+// const capitalizeName = function (name) {
+//   const names = name.split(" ");
+//   // console.log(names);
+//   const namesUpper = [];
+//   for (const n of names) {
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//     // another way //
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(namesUpper.join("------ "));
+// };
 
-capitalizeName("jessica an smith davis");
-capitalizeName("sazzad hoaasin tomalo");
+// capitalizeName("jessica an smith davis");
+// capitalizeName("sazzad hoaasin tomalo");
 
 const sazzad = "sazzad hossain tomal";
 const yeasin = "sha mohammad yeasin hossain";
@@ -206,6 +206,7 @@ function capitalName(name) {
   const newName = [];
   for (const n of names) {
     newName.push(n[0].toUpperCase() + n.slice(1));
+    // newName.push(n.replace(n[0], n[0].toUpperCase()));
   }
   const jo = newName.join(" ");
   console.log(jo);
@@ -214,3 +215,47 @@ function capitalName(name) {
 capitalName(sazzad);
 capitalName(yeasin);
 capitalName(jannat);
+
+// // padStart() //
+
+// // youtube sorce
+// const str = "String";
+// const str2 = str.padStart(20, "s");
+// console.log(str2);
+// console.log(str2.length);
+///////////////////////////////////////////////////////
+
+const message = "Go to gate 23!";
+console.log(message.padStart(20, "+").padEnd(30, "="));
+console.log("sazzad".padStart(16, "=").padEnd(20, "="));
+
+const maskCrediteCard = function (number) {
+  const str = number + "";
+  // console.log(typeof str);
+  const last = str.slice(-3);
+  // console.log(last);
+  const returnToTheConsole = last.padStart(str.length, "*");
+  console.log(returnToTheConsole);
+};
+
+maskCrediteCard(+8801735440814);
+maskCrediteCard(+8801915686124);
+maskCrediteCard("01720286993");
+
+const number = 8801735440814;
+const number1 = 8801915686124;
+const number2 = "01915678754";
+
+const hiddenNumber = function (num) {
+  // console.log(num);
+  const convertToString = num + "";
+  // console.log(convertToString);
+  const slc = convertToString.slice(-3);
+
+  const padStartVar = slc.padStart(convertToString.length, "*");
+  console.log(padStartVar);
+};
+
+hiddenNumber(number);
+hiddenNumber(number1);
+hiddenNumber(number2);
