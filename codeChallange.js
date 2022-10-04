@@ -516,7 +516,23 @@ console.log(minutes);
 // }
 
 // turnary operator in loop //
-for (const [keys, values] of gameEvents) {
-  const half = keys <= 45 ? "First" : "Second";
-  console.log(`[${half} HALF] ${keys} : ${values}`);
-}
+// for (const [keys, values] of gameEvents) {
+//   const half = keys <= 45 ? "First" : "Second";
+//   console.log(`[${half} HALF] ${keys} : ${values}`);
+// }
+
+/////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+
+// 09 Data Structures, Modern Operators and Strings //
+// coding challange - 4 //
+
+document.querySelector(".btn").addEventListener("click", function () {
+  const text = document.querySelector(".text").value;
+  console.log(text);
+});
+
+// const text = "sazzad hossain tomal";
+// const textSp = text.split("\n");
+// console.log(textSp);
