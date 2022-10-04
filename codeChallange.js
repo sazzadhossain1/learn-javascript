@@ -528,11 +528,11 @@ console.log(minutes);
 // 09 Data Structures, Modern Operators and Strings //
 // coding challange - 4 //
 
-document.querySelector(".btn").addEventListener("click", function () {
-  const text = document.querySelector(".text").value;
-  console.log(text);
-});
+// document.querySelector(".btn").addEventListener("click", function () {
+//   const text = document.querySelector(".text").value;
+//   console.log(text);
+// });
 
-// const text = "sazzad hossain tomal";
-// const textSp = text.split("\n");
-// console.log(textSp);
+const text = "sazzad hossain tomal";
+const textSp = text.split(" ");
+console.log(textSp);
