@@ -291,3 +291,42 @@
 // planesInline(5);
 // planesInline(3);
 // planesInline(12);
+
+///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+// String Method Practice //
+const flights =
+  "_Delayed_Departure;fao93766109;tx121212121;11:25+_Arrival;bru09121212121;fao2121212121212121;11:25 +_Delayed_Arraival;hel4545454545454;fao434343434;12:05 +_Departure; fao34343434343;lis4343434343; 12:30";
+
+// console.log(flights.split("+"));
+
+for (const flight of flights.split("+")) {
+  const remove_ = flight.replaceAll("_", " ");
+  // console.log(remove_);
+  const semiColon = remove_.replaceAll(";", " ");
+  console.log(semiColon);
+  if (flight.startsWith("_Delayed")) {
+    console.log("**");
+  }
+  if (flight.startsWith("_Arrival") || flight.startsWith("_Departure")) {
+    const pad = flight.padStart(36, "---");
+    console.log(pad);
+  }
+}
+
+//------------------------------------------------------//
+// const getCode = (str) => str.slice(0, 3).toUpperCase();
+
+// for (const flight of flights.split("+")) {
+//   const [type, from, to, time] = flight.split(";");
+//   const output = `${type.startsWith("_Delayed") ? "**" : ""}${type.replaceAll(
+//     "_",
+//     " "
+//   )} ${getCode(from)} ${getCode(to)} (${time.replace(":", "h")})`.padStart(
+//     36,
+//     "---"
+//   );
+//   console.log(output);
+// }

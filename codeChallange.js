@@ -528,11 +528,29 @@ console.log(minutes);
 // 09 Data Structures, Modern Operators and Strings //
 // coding challange - 4 //
 
-// document.querySelector(".btn").addEventListener("click", function () {
-//   const text = document.querySelector(".text").value;
-//   console.log(text);
-// });
+document.querySelector(".btn").addEventListener("click", function () {
+  const text = document.querySelector(".text").value;
+  const rows = text.split(" \n");
+  // console.log(rows);
 
-const text = "sazzad hossain tomal";
-const textSp = text.split(" ");
-console.log(textSp);
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split("_");
+    // console.log(row, first, second);
+
+    const output = `${first} ${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20)}${"*".repeat(i + 1)}`);
+  }
+});
+
+// const text = "sazzad hossain tomal";
+// const textSp = text.split(" ");
+// console.log(textSp);
+
+// underscore_case
+// first_name
+// Some_Variable
+//  calculate_AGE
+// delayed_departure
