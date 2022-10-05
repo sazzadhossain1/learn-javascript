@@ -298,29 +298,37 @@
 
 // String Method Practice //
 const flights =
-  "_Delayed_Departure;fao93766109;tx121212121;11:25+_Arrival;bru09121212121;fao2121212121212121;11:25 +_Delayed_Arraival;hel4545454545454;fao434343434;12:05 +_Departure; fao34343434343;lis4343434343; 12:30";
+  "_Delayed_Departure;fao93766109;txl21212121;11:25+_Arrival;bru09121212121;fao2121212121212121;11:25 +_Delayed_Arraival;hel4545454545454;fao434343434;12:05 +_Departure; fao34343434343;lis4343434343;12:30";
 
 // console.log(flights.split("+"));
 
 //------------------------------------------------------//
+const getCode = (str) => str.slice(0, 3).toUpperCase();
+
+for (const flight of flights.split("+")) {
+  const [type, from, to, time] = flight.split(";");
+  const output = `${type.startsWith("_Delayed") ? "**" : ""}${type.replaceAll(
+    "_",
+    " "
+  )} ${getCode(from)} ${getCode(to)} (${time.replace(":", "h")})`.padStart(
+    36,
+    "---"
+  );
+  console.log(output);
+}
+//==========================================//
+
 // const getCode = (str) => str.slice(0, 3).toUpperCase();
 
 // for (const flight of flights.split("+")) {
+//   // console.log(flight);
 //   const [type, from, to, time] = flight.split(";");
 //   const output = `${type.startsWith("_Delayed") ? "**" : ""}${type.replaceAll(
 //     "_",
 //     " "
-//   )} ${getCode(from)} ${getCode(to)} (${time.replace(":", "h")})`.padStart(
+//   )} ${getCode(from)} ${getCode(to)}( ${time.replace(":", "h")})`.padStart(
 //     36,
-//     "---"
+//     " "
 //   );
 //   console.log(output);
 // }
-//==========================================//
-
-for (const flight of flights.split("+")) {
-  console.log(flight);
-
-  const [type, from, to, time] = flight.split(";");
-  console.log(type, from, to, time);
-}
