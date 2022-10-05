@@ -302,20 +302,6 @@ const flights =
 
 // console.log(flights.split("+"));
 
-for (const flight of flights.split("+")) {
-  const remove_ = flight.replaceAll("_", " ");
-  // console.log(remove_);
-  const semiColon = remove_.replaceAll(";", " ");
-  console.log(semiColon);
-  if (flight.startsWith("_Delayed")) {
-    console.log("**");
-  }
-  if (flight.startsWith("_Arrival") || flight.startsWith("_Departure")) {
-    const pad = flight.padStart(36, "---");
-    console.log(pad);
-  }
-}
-
 //------------------------------------------------------//
 // const getCode = (str) => str.slice(0, 3).toUpperCase();
 
@@ -330,3 +316,11 @@ for (const flight of flights.split("+")) {
 //   );
 //   console.log(output);
 // }
+//==========================================//
+
+for (const flight of flights.split("+")) {
+  console.log(flight);
+
+  const [type, from, to, time] = flight.split(";");
+  console.log(type, from, to, time);
+}
