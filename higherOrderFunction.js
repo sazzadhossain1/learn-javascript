@@ -1,3 +1,5 @@
+// Youtube video from shumit vai //
+
 // higher order function holo ----> akti function (peramiter) hisebe onno akta function ke nibe othoba onno akta function ke return korbe.......nicher tir moto.....ati ke bola hoy higher order function.....//
 
 function hello() {
@@ -68,3 +70,26 @@ const players = [
 
 const playersWithAvgForty = players.filter((player) => player.avg >= 40);
 console.log(playersWithAvgForty);
+
+// Example 3 array.map() built in by me ===> higher order function //
+
+const languages = ["Javascript", "python", "PHP", "C"];
+
+function mapSazzad(arr, fn) {
+  const newArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(fn(arr[i]));
+  }
+  return newArray;
+}
+
+const myArray = mapSazzad(languages, function (languages) {
+  return languages.length;
+});
+
+console.log(myArray);
+
+///////////////////////////////////////////////////
+//////////////////////////////////////////////////
+/////////////////////////////////////////////////
