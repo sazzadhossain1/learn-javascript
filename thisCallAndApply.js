@@ -40,3 +40,10 @@ const swiss = {
 
 book.call(swiss, 583, "Mary cooper");
 console.log(swiss);
+
+// Apply Method //
+const flightData = [583, "George Cooper"];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+book.call(swiss, ...flightData);
