@@ -53,11 +53,18 @@ const players = [
   },
 ];
 
-const playersWithAvgForty = [];
+// const playersWithAvgForty = [];
 
-for (let i = 0; i < players.length; i++) {
-  if (players[i].avg > 40) {
-    playersWithAvgForty.push(players[i]);
-  }
-}
+// for (let i = 0; i < players.length; i++) {
+//   if (players[i].avg > 40) {
+//     playersWithAvgForty.push(players[i]);
+//   }
+// }
+// console.log(playersWithAvgForty);
+
+//=-------------------------------------------=//
+
+// Example 2 with higher order function //
+
+const playersWithAvgForty = players.filter((player) => player.avg >= 40);
 console.log(playersWithAvgForty);
