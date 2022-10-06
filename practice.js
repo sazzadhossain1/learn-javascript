@@ -314,11 +314,43 @@
 // // const minNumber = Math.min(...number);
 // // console.log(minNumber);
 
-const arry = [1, 1, 2, 2, 3, 4, 5, 6, 7, 7, 8, 9, 9, 2];
-let n = 0;
-for (let i = 0; i < arry.length; i++) {
-  if (arry[i] > n) {
-    n = arry[i];
-    console.log(n);
+// const arry = [1, 1, 2, 2, 3, 4, 5, 6, 7, 7, 8, 9, 9, 2];
+// let n = 0;
+// for (let i = 0; i < arry.length; i++) {
+//   if (arry[i] > n) {
+//     n = arry[i];
+//     console.log(n);
+//   }
+// }
+/////////////////////////////////////////////
+// const name1 = ["Sazzad", "Hossain", "Tomal"];
+
+// const fun = function (num) {
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] === "Sazzad") {
+//       console.log(num[i]);
+//     }
+//     return function (text) {
+//       const comment = num[i] + " " + text;
+//       console.log(comment);
+//     };
+//   }
+// };
+
+// fun(name1)("How are you ?");
+
+const nameArray = ["Sazzad", "Hossain", "Tomal"];
+
+const nameFun = function (num) {
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] === "Sazzad") {
+      console.log(num[i]);
+    }
+    return function (text) {
+      const sazzadCall = `Hey Mr. ${num[i] + " " + text}`;
+      console.log(sazzadCall);
+    };
   }
-}
+};
+
+nameFun(nameArray)("How are you");
