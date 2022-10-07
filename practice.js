@@ -358,4 +358,16 @@
 
 const name = ["Sazzad", "Hossain", "Tomal"];
 
-const nameFun = function (name) {};
+const nameFun = function (name) {
+  for (let i = 0; i < name.length; i++) {
+    if (name[i] === "Sazzad") {
+      const sazzadName = name[i];
+      return function (text) {
+        const sentence = `Hey Mr. ${sazzadName} ${text}`;
+        console.log(sentence);
+      };
+    }
+  }
+};
+
+nameFun(name)("How are you");
