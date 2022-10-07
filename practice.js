@@ -339,18 +339,23 @@
 
 // fun(name1)("How are you ?");
 
-const nameArray = ["Sazzad", "Hossain", "Tomal"];
+// const nameArray = ["Sazzad", "Hossain", "Tomal"];
 
-const nameFun = function (num) {
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] === "Sazzad") {
-      console.log(num[i]);
-    }
-    return function (text) {
-      const sazzadCall = `Hey Mr. ${num[i] + " " + text}`;
-      console.log(sazzadCall);
-    };
-  }
-};
+// const nameFun = function (num) {
+//   for (let i = 0; i < num.length; i++) {
+//     if (num[i] === "Sazzad") {
+//       console.log(num[i]);
+//     }
+//     return function (text) {
+//       const sazzadCall = `Hey Mr. ${num[i] + " " + text}`;
+//       console.log(sazzadCall);
+//     };
+//   }
+// };
 
-nameFun(nameArray)("How are you");
+// nameFun(nameArray)("How are you");
+////////////////////////////////////////////////////////
+
+const name = ["Sazzad", "Hossain", "Tomal"];
+
+const nameFun = function (name) {};
