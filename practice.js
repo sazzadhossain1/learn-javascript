@@ -360,7 +360,8 @@ const name = ["Sazzad", "Hossain", "Tomal"];
 
 const nameFun = function (name) {
   for (let i = 0; i < name.length; i++) {
-    if (name[i] === "Sazzad") {
+    name[i].toLowerCase();
+    if (name[i] === "sazzad") {
       const sazzadName = name[i];
       return function (text) {
         const sentence = `Hey Mr. ${sazzadName} ${text}`;
@@ -370,4 +371,4 @@ const nameFun = function (name) {
   }
 };
 
-nameFun(name)("How are you");
+nameFun(name)("how are you");
