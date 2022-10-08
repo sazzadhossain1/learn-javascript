@@ -528,29 +528,37 @@ console.log(minutes);
 // 09 Data Structures, Modern Operators and Strings //
 // coding challange - 4 //
 
-document.querySelector(".btn").addEventListener("click", function () {
-  const text = document.querySelector(".text").value;
-  const rows = text.split(" \n");
-  // console.log(rows);
+// document.querySelector(".btn").addEventListener("click", function () {
+//   const text = document.querySelector(".text").value;
+//   const rows = text.split(" \n");
+//   // console.log(rows);
 
-  for (const [i, row] of rows.entries()) {
-    const [first, second] = row.toLowerCase().trim().split("_");
-    // console.log(row, first, second);
+//   for (const [i, row] of rows.entries()) {
+//     const [first, second] = row.toLowerCase().trim().split("_");
+//     // console.log(row, first, second);
 
-    const output = `${first} ${second.replace(
-      second[0],
-      second[0].toUpperCase()
-    )}`;
-    console.log(`${output.padEnd(20)}${"*".repeat(i + 1)}`);
-  }
-});
+//     const output = `${first} ${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
+//     console.log(`${output.padEnd(20)}${"*".repeat(i + 1)}`);
+//   }
+// });
 
 // const text = "sazzad hossain tomal";
 // const textSp = text.split(" ");
 // console.log(textSp);
+//////////////////////////////////////////////////
 
-// underscore_case
-// first_name
-// Some_Variable
-//  calculate_AGE
-// delayed_departure
+// A Closer Look at Functions //
+// Coding Challange --- 1 //
+
+const poll = {
+  question: "What is your favourite programming Language?",
+  options: ["0: Javasctipt", "1: Python", "2: Rust", "3: C++"],
+
+  answers: new Array(4).fill(0),
+  registerNewAnswer() {
+    const answer = prompt();
+  },
+};

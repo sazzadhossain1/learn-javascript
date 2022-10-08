@@ -59,6 +59,34 @@ bookEw23("Sazzad Hossain");
 bookEw23("Yeasin Hossain");
 bookEw23("Anwar Hossain");
 
+lufthansa.planes = 300;
+lufthansa.BuyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+lufthansa.BuyPlane();
+document
+  .querySelector(".buy")
+  .addEventListener("click", lufthansa.BuyPlane.bind(lufthansa));
+
+const addTex = (rate, value) => value + value * rate;
+console.log(addTex(0.1, 200));
+
+const addVAT = addTex.bind(null, 0, 23);
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+const addTexRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVAT2 = addTexRate(0, 23);
+console.log(addVAT2(100));
+console.log(addVAT2(23));
+
 //////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
