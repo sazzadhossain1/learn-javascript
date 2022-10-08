@@ -50,3 +50,68 @@
 ////////////////////////////////////////////////////
 
 // Youtube video theke kora by (learn with shumit vai) //
+
+// let printPlayerName = function (name) {
+//   console.log(name);
+// };
+
+// printPlayerName("Sazzad Hossain Tomal");
+
+// Implicit Binding //
+//-----------------//
+
+// let sazzad = {
+//   name: "Sazzad",
+//   age: 26,
+//   printPlayerName: function () {
+//     console.log(`Hi's name is ${this.name} and hi's age is ${this.age}`);
+//   },
+// };
+// sazzad.printPlayerName();
+
+// let printPlayerNameFunction = function (obj) {
+//   obj.printPlayerName = function () {
+//     console.log(this.name, this.age);
+//   };
+// };
+
+// let sakib = {
+//   name: "Sakib",
+//   age: 35,
+// };
+// let tamim = {
+//   name: "Tamim",
+//   age: 30,
+// };
+
+// printPlayerNameFunction(sakib);
+// printPlayerNameFunction(tamim);
+
+// sakib.printPlayerName();
+// tamim.printPlayerName();
+
+////////////////////////////////////////
+
+let person = function (name, age) {
+  return {
+    name: name,
+    age: age,
+    printName: function () {
+      console.log(this.name, this.age);
+    },
+    father: {
+      name: "Anwar Hossain",
+      age: 60,
+      printFatherName: function () {
+        console.log(
+          `My father name is ${this.name} and My father age is ${this.age}`
+        );
+      },
+    },
+  };
+};
+
+let sazzad = person("sazzad", 26);
+sazzad.printName();
+
+sazzad.father.printFatherName();
