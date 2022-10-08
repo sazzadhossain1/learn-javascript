@@ -92,26 +92,45 @@
 
 ////////////////////////////////////////
 
-let person = function (name, age) {
-  return {
-    name: name,
-    age: age,
-    printName: function () {
-      console.log(this.name, this.age);
-    },
-    father: {
-      name: "Anwar Hossain",
-      age: 60,
-      printFatherName: function () {
-        console.log(
-          `My father name is ${this.name} and My father age is ${this.age}`
-        );
-      },
-    },
-  };
+// let person = function (name, age) {
+//   return {
+//     name: name,
+//     age: age,
+//     printName: function () {
+//       console.log(this.name, this.age);
+//     },
+//     father: {
+//       name: "Anwar Hossain",
+//       age: 60,
+//       printFatherName: function () {
+//         console.log(
+//           `My father name is ${this.name} and My father age is ${this.age}`
+//         );
+//       },
+//     },
+//   };
+// };
+
+// let sazzad = person("sazzad", 26);
+// sazzad.printName();
+
+// sazzad.father.printFatherName();
+
+////////////////////////////////////////////////
+
+// Explicit Binding //
+
+const printName = function (v1, v2, v3) {
+  console.log(`${this.name} is ${v1} ${v2} and ${v3}`);
 };
 
-let sazzad = person("sazzad", 26);
-sazzad.printName();
+let sakib = {
+  name: "Sakib Al Hasan",
+  age: 35,
+};
 
-sazzad.father.printFatherName();
+let v1 = "Handsome";
+let v2 = "All-Rounder";
+let v3 = "Best Player";
+
+printName.call(sakib, v1, v2, v3);
