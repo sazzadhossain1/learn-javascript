@@ -139,3 +139,8 @@ let v = [v1, v2, v3];
 console.log(v);
 
 printName.apply(sakib, v);
+
+// bind method shorashori function ke call kore na...bind ashole call er motoni kaj kore kintu function ke direct call na kore return kore day........
+
+let newFun = printName.bind(sakib, v1, v2, v3);
+newFun();
