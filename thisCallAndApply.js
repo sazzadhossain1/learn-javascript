@@ -133,4 +133,9 @@ let v1 = "Handsome";
 let v2 = "All-Rounder";
 let v3 = "Best Player";
 
-printName.call(sakib, v1, v2, v3);
+printName.call(sakib, v1, v2, v3); // ===> call method kokhon array pass korte pare na....akhon jodi amra v1 v2 and v3 ke akta array er vitore rekhe printName function er vitore argument hishebe pass korte chai tahole amader apply methode use korte hobe......karon call method array pass korte pare na......ai jonno apply method use korte hobe......
+
+let v = [v1, v2, v3];
+console.log(v);
+
+printName.apply(sakib, v);
