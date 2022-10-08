@@ -1,49 +1,63 @@
-// const lufthansa = {
-//   airline: "Lufthansa",
-//   iataCode: "LH",
-//   bookings: [],
+const lufthansa = {
+  airline: "Lufthansa",
+  iataCode: "LH",
+  bookings: [],
 
-//   book(flightNum, name) {
-//     console.log(
-//       `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
-//     );
-//     this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
-//   },
-// };
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
+  },
+};
 
-// lufthansa.book(239, "Sazzad Hossain Tomal");
-// lufthansa.book(1212, "Shah Mohammad Yeasin Hossain");
-// console.log(lufthansa.bookings);
+lufthansa.book(239, "Sazzad Hossain Tomal");
+lufthansa.book(1212, "Shah Mohammad Yeasin Hossain");
+console.log(lufthansa.bookings);
 
-// const eurowings = {
-//   airline: "Eurowings",
-//   iataCode: "EW",
-//   bookings: [],
-// };
-// const books = lufthansa.book;
-// console.log(books);
+const eurowings = {
+  airline: "Eurowings",
+  iataCode: "EW",
+  bookings: [],
+};
+const books = lufthansa.book;
+console.log(books);
 
-// // Call Method... //
-// books.call(eurowings, 23, "Sarah Williams");
-// console.log(eurowings);
+// Call Method... //
+books.call(eurowings, 23, "Sarah Williams");
+console.log(eurowings);
 
-// books.call(lufthansa, 239, "Mohammad Yeasin");
-// console.log(lufthansa);
+books.call(lufthansa, 239, "Mohammad Yeasin");
+console.log(lufthansa);
 
-// const swiss = {
-//   airline: "Swiss Air Lines",
-//   iataCode: "LX",
-//   bookings: [],
-// };
+const swiss = {
+  airline: "Swiss Air Lines",
+  iataCode: "LX",
+  bookings: [],
+};
 
-// books.call(swiss, 583, "Umme khadijatul Jannat");
-// console.log(swiss);
+books.call(swiss, 583, "Umme khadijatul Jannat");
+console.log(swiss);
 
-// const flightData = [583, "George Cooper"];
-// books.apply(swiss, flightData);
-// console.log(swiss);
+const flightData = [583, "George Cooper"];
+books.apply(swiss, flightData);
+console.log(swiss);
 
-// books.call(swiss, ...flightData);
+books.call(swiss, ...flightData);
+
+// Bind method //
+// book.call(eurowings,23, 'Sarah williams')
+
+const bookEw = books.bind(eurowings);
+const bookLH = books.bind(lufthansa);
+const bookLX = books.bind(swiss);
+
+bookEw(23, "Steven williams");
+
+const bookEw23 = books.bind(eurowings, 23);
+bookEw23("Sazzad Hossain");
+bookEw23("Yeasin Hossain");
+bookEw23("Anwar Hossain");
 
 //////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
@@ -120,27 +134,38 @@
 
 // Explicit Binding //
 
-const printName = function (v1, v2, v3) {
-  console.log(`${this.name} is ${v1} ${v2} and ${v3}`);
-};
+// const printName = function (v1, v2, v3) {
+//   console.log(`${this.name} is ${v1} ${v2} and ${v3}`);
+// };
 
-let sakib = {
-  name: "Sakib Al Hasan",
-  age: 35,
-};
+// let sakib = {
+//   name: "Sakib Al Hasan",
+//   age: 35,
+// };
 
-let v1 = "Handsome";
-let v2 = "All-Rounder";
-let v3 = "Best Player";
+// let v1 = "Handsome";
+// let v2 = "All-Rounder";
+// let v3 = "Best Player";
 
-printName.call(sakib, v1, v2, v3); // ===> call method kokhon array pass korte pare na....akhon jodi amra v1 v2 and v3 ke akta array er vitore rekhe printName function er vitore argument hishebe pass korte chai tahole amader apply methode use korte hobe......karon call method array pass korte pare na......ai jonno apply method use korte hobe......
+// printName.call(sakib, v1, v2, v3); // ===> call method kokhon array pass korte pare na....akhon jodi amra v1 v2 and v3 ke akta array er vitore rekhe printName function er vitore argument hishebe pass korte chai tahole amader apply methode use korte hobe......karon call method array pass korte pare na......ai jonno apply method use korte hobe......
 
-let v = [v1, v2, v3];
-console.log(v);
+// let v = [v1, v2, v3];
+// console.log(v);
 
-printName.apply(sakib, v);
+// printName.apply(sakib, v);
 
 // bind method shorashori function ke call kore na...bind ashole call er motoni kaj kore kintu function ke direct call na kore return kore day........
 
-let newFun = printName.bind(sakib, v1, v2, v3);
-newFun();
+// let newFun = printName.bind(sakib, v1, v2, v3);
+// newFun();
+
+//////////////////////////////////////////////////////////////
+
+// let printName = function () {
+//   console.log(this.name);
+// };
+
+// let sakib = {
+//   name: "sakib",
+// };
+// printName();
