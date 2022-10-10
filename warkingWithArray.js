@@ -91,7 +91,16 @@
 // console.log([...arr]);
 
 // SPLICE //
+// let arr = ["a", "b", "c", "d", "e"];
+// // console.log(arr.splice(2));
+// arr.splice(-1);
+// arr.splice(1, 2);
+// console.log(arr);
+
+// REVERSE //
 let arr = ["a", "b", "c", "d", "e"];
-console.log(arr.splice(2));
-arr.splice(-1);
-console.log(arr);
+const arr2 = ["j", "i", "h", "g", "f"];
+arr2.reverse();
+console.log(arr2);
+
+// console.log(...arr, " ", ...arr2);
