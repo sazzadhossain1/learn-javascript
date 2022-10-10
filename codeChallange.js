@@ -597,3 +597,8 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 
 // A Closer Look at Functions //
 // Coding Challange --- 2 //
+
+(function () {
+  const header = document.querySelector("h1");
+  header.style.color = "red";
+})();
