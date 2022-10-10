@@ -76,15 +76,22 @@
 
 ///////////////////////////////////////////////////////////////
 
+// let arr = ["a", "b", "c", "d", "e"];
+// console.log(arr.slice(2));
+
+// // SLICE //
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(-2));
+// console.log(arr.slice(1, -2));
+// console.log(arr.slice(1, 3));
+
+// console.log(arr.slice());
+
+// console.log(...arr);
+// console.log([...arr]);
+
+// SPLICE //
 let arr = ["a", "b", "c", "d", "e"];
-console.log(arr.slice(2));
-
-console.log(arr.slice(2, 4));
-console.log(arr.slice(-2));
-console.log(arr.slice(1, -2));
-console.log(arr.slice(1, 3));
-
-console.log(arr.slice());
-
-console.log(...arr);
-console.log([...arr]);
+console.log(arr.splice(2));
+arr.splice(-1);
+console.log(arr);
