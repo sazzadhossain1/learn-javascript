@@ -98,19 +98,34 @@
 // console.log(arr);
 
 // REVERSE //
-let arr = ["a", "b", "c", "d", "e"];
-const arr2 = ["j", "i", "h", "g", "f"];
-arr2.reverse();
-console.log(arr2);
+// let arr = ["a", "b", "c", "d", "e"];
+// const arr2 = ["j", "i", "h", "g", "f"];
+// arr2.reverse();
+// console.log(arr2);
 
-// console.log(...arr, " ", ...arr2);
+// // console.log(...arr, " ", ...arr2);
 
-// CONCAT //
-const letters = arr.concat(arr2);
-console.log(letters);
+// // CONCAT //
+// const letters = arr.concat(arr2);
+// console.log(letters);
 
-console.log(...letters);
-console.log(...arr, ...arr2);
+// console.log(...letters);
+// console.log(...arr, ...arr2);
 
-// JOIN //
-console.log(letters.join(" == "));
+// // JOIN //
+// console.log(letters.join(" == "));
+
+/////////////////////////////////////////////////////
+///////////////////////////////////////
+//////////////////////////
+
+const arr = [23, 11, 64];
+console.log(arr[0]);
+console.log(arr.at(0));
+console.log(arr[arr.length - 1]);
+console.log(arr[arr.length - 2]);
+console.log(arr[arr.length - 3]);
+
+console.log(...arr.slice(-1));
+console.log(...arr.slice(-2));
+console.log(...arr.slice(-3));
