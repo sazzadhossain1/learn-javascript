@@ -128,7 +128,7 @@ const add = temporary();
 
 console.dir(add);
 add();
-console.dir(add);
+// console.dir(add);
 add();
-console.dir(add);
+// console.dir(add);
 add();

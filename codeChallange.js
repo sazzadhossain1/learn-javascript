@@ -594,3 +594,6 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, "string");
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 
 //---------------------------------------------------------//
+
+// A Closer Look at Functions //
+// Coding Challange --- 2 //
