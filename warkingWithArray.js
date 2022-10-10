@@ -104,3 +104,9 @@ arr2.reverse();
 console.log(arr2);
 
 // console.log(...arr, " ", ...arr2);
+
+// CONCAT //
+const letters = arr.concat(arr2);
+console.log(letters);
+
+console.log(...letters);
