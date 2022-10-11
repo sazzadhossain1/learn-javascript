@@ -122,10 +122,25 @@
 const arr = [23, 11, 64];
 console.log(arr[0]);
 console.log(arr.at(0));
+
+// getting last array element //
 console.log(arr[arr.length - 1]);
-console.log(arr[arr.length - 2]);
-console.log(arr[arr.length - 3]);
+// console.log(arr[arr.length - 2]);
+// console.log(arr[arr.length - 3]);
 
 console.log(...arr.slice(-1));
-console.log(...arr.slice(-2));
-console.log(...arr.slice(-3));
+// console.log(...arr.slice(-2));
+// console.log(...arr.slice(-3));
+
+// getting last element with (at) method //
+console.log(arr.at(-1));
+// console.log(arr.at(-2));
+// console.log(arr.at(-3));
+
+// at method with string//
+let name = "Yeasin";
+console.log(name.at(0));
+console.log(name.at(-1));
+console.log(name.at(-2));
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
