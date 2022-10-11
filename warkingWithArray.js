@@ -180,3 +180,16 @@ console.log("================ FOREACH =============");
 number.forEach(function (num, i, arr) {
   console.log(`Number ${i}. ${num} `);
 });
+
+//--------------------------------//
+
+const numbers = [1, 2, 2, 3, 3, 4, 5, 5, 6, 6];
+const removeDuplicate = new Set(numbers);
+const receveNumber = [];
+
+removeDuplicate.forEach(function (num) {
+  receveNumber.push(num * num);
+  // console.log(receveNumber);
+});
+
+console.log(receveNumber);
