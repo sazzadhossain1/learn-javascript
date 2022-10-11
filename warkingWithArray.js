@@ -193,3 +193,32 @@ removeDuplicate.forEach(function (num) {
 });
 
 console.log(receveNumber);
+
+////////////////////////////////////////////////
+
+const newNumbe = [1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 8, 9, 10];
+
+const duplicateNum = new Set(newNumbe);
+const plusNumber = [];
+duplicateNum.forEach(function (n, i, a) {
+  plusNumber.push((a[i] = n + 5));
+});
+console.log(plusNumber);
+
+////////////////////////////////////////////////////////
+
+const amountNumber = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
+const revNum = new Set(amountNumber);
+const empty = [];
+revNum.forEach(function (n, i, a) {
+  empty.push((a[i] = n * n));
+});
+console.log(revNum);
+//////////////////////////////////////////
+
+const pls = [];
+revNum.forEach(function (n, i, a) {
+  pls.push(n + 5);
+});
+
+console.log(pls);
