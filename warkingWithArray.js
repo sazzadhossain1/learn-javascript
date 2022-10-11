@@ -144,3 +144,39 @@ console.log(name.at(-1));
 console.log(name.at(-2));
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const movement of movements) {
+for (const [i, movement] of movements.entries()) {
+  if (movement > 0) {
+    console.log(`Movement ${i + 1} You dposited ${movement}`);
+  } else {
+    console.log(`Movement ${i + 1} You withdrew ${Math.abs(movement)}`);
+  }
+}
+
+console.log("============ FOREACH ============");
+
+movements.forEach(function (movement, index, array) {
+  if (movement > 0) {
+    console.log(`Movement ${index + 1} You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${index + 1} You Withdraw ${Math.abs(movement)}`);
+  }
+});
+
+/////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////
+
+// anisul islam sir by youtube //
+
+const number = [12, 22, 33, 44, 55, 66];
+for (let i = 0; i < number.length; i++) {
+  console.log(number[i]);
+}
+
+console.log("================ FOREACH =============");
+// same kaj ti for Each er maddhome korbo //
+number.forEach(function (num, i, arr) {
+  console.log(`Number ${i}. ${num} `);
+});
