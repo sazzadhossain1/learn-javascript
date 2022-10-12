@@ -1,72 +1,3 @@
-"use strict";
-
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// BANKIST APP
-
-/////////////////////////////////////////////////
-// Data
-// const account1 = {
-//   owner: "Jonas Schmedtmann",
-//   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
-//   interestRate: 1.2, // %
-//   pin: 1111,
-// };
-
-// const account2 = {
-//   owner: "Jessica Davis",
-//   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
-//   interestRate: 1.5,
-//   pin: 2222,
-// };
-
-// const account3 = {
-//   owner: "Steven Thomas Williams",
-//   movements: [200, -200, 340, -300, -20, 50, 400, -460],
-//   interestRate: 0.7,
-//   pin: 3333,
-// };
-
-// const account4 = {
-//   owner: "Sarah Smith",
-//   movements: [430, 1000, 700, 50, 90],
-//   interestRate: 1,
-//   pin: 4444,
-// };
-
-// const accounts = [account1, account2, account3, account4];
-
-// /////////////////////////////////////////////////
-// // Elements
-// const labelWelcome = document.querySelector(".welcome");
-// const labelDate = document.querySelector(".date");
-// const labelBalance = document.querySelector(".balance__value");
-// const labelSumIn = document.querySelector(".summary__value--in");
-// const labelSumOut = document.querySelector(".summary__value--out");
-// const labelSumInterest = document.querySelector(".summary__value--interest");
-// const labelTimer = document.querySelector(".timer");
-
-// const containerApp = document.querySelector(".app");
-// const containerMovements = document.querySelector(".movements");
-
-// const btnLogin = document.querySelector(".login__btn");
-// const btnTransfer = document.querySelector(".form__btn--transfer");
-// const btnLoan = document.querySelector(".form__btn--loan");
-// const btnClose = document.querySelector(".form__btn--close");
-// const btnSort = document.querySelector(".btn--sort");
-
-// const inputLoginUsername = document.querySelector(".login__input--user");
-// const inputLoginPin = document.querySelector(".login__input--pin");
-// const inputTransferTo = document.querySelector(".form__input--to");
-// const inputTransferAmount = document.querySelector(".form__input--amount");
-// const inputLoanAmount = document.querySelector(".form__input--loan-amount");
-// const inputCloseUsername = document.querySelector(".form__input--user");
-// const inputClosePin = document.querySelector(".form__input--pin");
-
-///////////////////////////////
-//////////////////////////////////////
-///////////////////////////////////////////////
-
 // const currencies = new Map([
 //   ["USD", "United States dollar"],
 //   ["EUR", "Euro"][("GBP", "Pound Sterling")],
@@ -119,106 +50,123 @@
 ///////////////////////////////////////
 //////////////////////////
 
-const arr = [23, 11, 64];
-console.log(arr[0]);
-console.log(arr.at(0));
+// const arr = [23, 11, 64];
+// console.log(arr[0]);
+// console.log(arr.at(0));
 
-// getting last array element //
-console.log(arr[arr.length - 1]);
-// console.log(arr[arr.length - 2]);
-// console.log(arr[arr.length - 3]);
+// // getting last array element //
+// console.log(arr[arr.length - 1]);
+// // console.log(arr[arr.length - 2]);
+// // console.log(arr[arr.length - 3]);
 
-console.log(...arr.slice(-1));
-// console.log(...arr.slice(-2));
-// console.log(...arr.slice(-3));
+// console.log(...arr.slice(-1));
+// // console.log(...arr.slice(-2));
+// // console.log(...arr.slice(-3));
 
-// getting last element with (at) method //
-console.log(arr.at(-1));
-// console.log(arr.at(-2));
-// console.log(arr.at(-3));
+// // getting last element with (at) method //
+// console.log(arr.at(-1));
+// // console.log(arr.at(-2));
+// // console.log(arr.at(-3));
 
-// at method with string//
-let name = "Yeasin";
-console.log(name.at(0));
-console.log(name.at(-1));
-console.log(name.at(-2));
+// // at method with string//
+// let name = "Yeasin";
+// console.log(name.at(0));
+// console.log(name.at(-1));
+// console.log(name.at(-2));
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// for (const movement of movements) {
-for (const [i, movement] of movements.entries()) {
-  if (movement > 0) {
-    console.log(`Movement ${i + 1} You dposited ${movement}`);
-  } else {
-    console.log(`Movement ${i + 1} You withdrew ${Math.abs(movement)}`);
-  }
-}
+// // for (const movement of movements) {
+// for (const [i, movement] of movements.entries()) {
+//   if (movement > 0) {
+//     console.log(`Movement ${i + 1} You dposited ${movement}`);
+//   } else {
+//     console.log(`Movement ${i + 1} You withdrew ${Math.abs(movement)}`);
+//   }
+// }
 
-console.log("============ FOREACH ============");
+// console.log("============ FOREACH ============");
 
-movements.forEach(function (movement, index, array) {
-  if (movement > 0) {
-    console.log(`Movement ${index + 1} You deposited ${movement}`);
-  } else {
-    console.log(`Movement ${index + 1} You Withdraw ${Math.abs(movement)}`);
-  }
-});
+// movements.forEach(function (movement, index, array) {
+//   if (movement > 0) {
+//     console.log(`Movement ${index + 1} You deposited ${movement}`);
+//   } else {
+//     console.log(`Movement ${index + 1} You Withdraw ${Math.abs(movement)}`);
+//   }
+// });
 
+// const currencies = new Map([
+//   ["USD", "United States dollar"],
+//   ["EUR", "Euro"],
+//   ["GBP", "Pound Sterling"],
+// ]);
+
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key}: ${value}`);
+// });
+
+// const currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
+// console.log(currenciesUnique);
+
+// currenciesUnique.forEach(function (value, _, map) {
+//   console.log(`${value}: ${value}`);
+// });
 /////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////
 
 // anisul islam sir by youtube //
+//----------------------------//
 
-const number = [12, 22, 33, 44, 55, 66];
-for (let i = 0; i < number.length; i++) {
-  console.log(number[i]);
-}
+// const number = [12, 22, 33, 44, 55, 66];
+// for (let i = 0; i < number.length; i++) {
+//   console.log(number[i]);
+// }
 
-console.log("================ FOREACH =============");
-// same kaj ti for Each er maddhome korbo //
-number.forEach(function (num, i, arr) {
-  console.log(`Number ${i}. ${num} `);
-});
+// console.log("================ FOREACH =============");
+// // same kaj ti for Each er maddhome korbo //
+// number.forEach(function (num, i, arr) {
+//   console.log(`Number ${i}. ${num} `);
+// });
 
-//--------------------------------//
+// //--------------------------------//
 
-const numbers = [1, 2, 2, 3, 3, 4, 5, 5, 6, 6];
-const removeDuplicate = new Set(numbers);
-const receveNumber = [];
+// const numbers = [1, 2, 2, 3, 3, 4, 5, 5, 6, 6];
+// const removeDuplicate = new Set(numbers);
+// const receveNumber = [];
 
-removeDuplicate.forEach(function (num) {
-  receveNumber.push(num * num);
-  // console.log(receveNumber);
-});
+// removeDuplicate.forEach(function (num) {
+//   receveNumber.push(num * num);
+//   // console.log(receveNumber);
+// });
 
-console.log(receveNumber);
+// console.log(receveNumber);
 
-////////////////////////////////////////////////
+// ////////////////////////////////////////////////
 
-const newNumbe = [1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 8, 9, 10];
+// const newNumbe = [1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 8, 9, 10];
 
-const duplicateNum = new Set(newNumbe);
-const plusNumber = [];
-duplicateNum.forEach(function (n, i, a) {
-  plusNumber.push((a[i] = n + 5));
-});
-console.log(plusNumber);
+// const duplicateNum = new Set(newNumbe);
+// const plusNumber = [];
+// duplicateNum.forEach(function (n, i, a) {
+//   plusNumber.push((a[i] = n + 5));
+// });
+// console.log(plusNumber);
 
-////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
 
-const amountNumber = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
-const revNum = new Set(amountNumber);
-const empty = [];
-revNum.forEach(function (n, i, a) {
-  empty.push((a[i] = n * n));
-});
-console.log(revNum);
-//////////////////////////////////////////
+// const amountNumber = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
+// const revNum = new Set(amountNumber);
+// const empty = [];
+// revNum.forEach(function (n, i, a) {
+//   empty.push((a[i] = n * n));
+// });
+// console.log(revNum);
+// //////////////////////////////////////////
 
-const pls = [];
-revNum.forEach(function (n, i, a) {
-  pls.push(n + 5);
-});
+// const pls = [];
+// revNum.forEach(function (n, i, a) {
+//   pls.push(n + 5);
+// });
 
-console.log(pls);
+// console.log(pls);
