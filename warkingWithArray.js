@@ -5,12 +5,12 @@
 
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 
 // let arr = ["a", "b", "c", "d", "e"];
 // console.log(arr.slice(2));
 
-// // SLICE //
+// SLICE //
 // console.log(arr.slice(2, 4));
 // console.log(arr.slice(-2));
 // console.log(arr.slice(1, -2));
@@ -21,22 +21,22 @@
 // console.log(...arr);
 // console.log([...arr]);
 
-// SPLICE //
+// SPLICE; //
 // let arr = ["a", "b", "c", "d", "e"];
 // // console.log(arr.splice(2));
 // arr.splice(-1);
 // arr.splice(1, 2);
 // console.log(arr);
 
-// REVERSE //
+// REVERSE; //
 // let arr = ["a", "b", "c", "d", "e"];
 // const arr2 = ["j", "i", "h", "g", "f"];
 // arr2.reverse();
 // console.log(arr2);
 
-// // console.log(...arr, " ", ...arr2);
+// console.log(...arr, " ", ...arr2);
 
-// // CONCAT //
+// CONCAT //
 // const letters = arr.concat(arr2);
 // console.log(letters);
 
@@ -46,35 +46,35 @@
 // // JOIN //
 // console.log(letters.join(" == "));
 
-/////////////////////////////////////////////////////
-///////////////////////////////////////
-//////////////////////////
+///////////////////////////////////////////////////
+/////////////////////////////////////
+////////////////////////
 
 // const arr = [23, 11, 64];
 // console.log(arr[0]);
 // console.log(arr.at(0));
 
-// // getting last array element //
+// getting last array element //
 // console.log(arr[arr.length - 1]);
-// // console.log(arr[arr.length - 2]);
-// // console.log(arr[arr.length - 3]);
+// console.log(arr[arr.length - 2]);
+// console.log(arr[arr.length - 3]);
 
 // console.log(...arr.slice(-1));
-// // console.log(...arr.slice(-2));
-// // console.log(...arr.slice(-3));
+// console.log(...arr.slice(-2));
+// console.log(...arr.slice(-3));
 
-// // getting last element with (at) method //
+// getting last element with (at) method //
 // console.log(arr.at(-1));
-// // console.log(arr.at(-2));
-// // console.log(arr.at(-3));
+// console.log(arr.at(-2));
+// console.log(arr.at(-3));
 
-// // at method with string//
+// at method with string//
 // let name = "Yeasin";
 // console.log(name.at(0));
 // console.log(name.at(-1));
 // console.log(name.at(-2));
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // // for (const movement of movements) {
 // for (const [i, movement] of movements.entries()) {
@@ -111,6 +111,54 @@
 // currenciesUnique.forEach(function (value, _, map) {
 //   console.log(`${value}: ${value}`);
 // });
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////
+
+const checkDogs = function (dogsjulia, dogsKate) {
+  const dogsjuliaCorrected = dogsjulia.slice();
+  dogsjuliaCorrected.splice(0, 1);
+  dogsjuliaCorrected.splice(-2);
+
+  // dogsjuliaCorrected.slice(1, 3);
+  console.log(dogsjuliaCorrected);
+
+  const dogs = dogsjuliaCorrected.concat(dogsKate);
+  console.log(dogs);
+
+  dogs.forEach(function (dog, i) {
+    if (dog >= 3) {
+      console.log(`Dog numbe ${i + 1} is an adult, and is ${dog} years old`);
+    } else {
+      console.log(`Dog number ${i + 1} is still a puppy`);
+    }
+  });
+};
+
+// checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
+///////////////////////////////////////////////////////////
+
+const eurToUsd = 1.1;
+
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+const movementsUSD = movements.map((mov) => {
+  return mov * eurToUsd;
+});
+
+console.log(movements);
+console.log(movementsUSD);
+
+console.log(movements);
+const movementsUSDfor = [];
+for (const mov of movements) {
+  movementsUSDfor.push(mov * eurToUsd);
+  console.log(movementsUSDfor);
+}
 /////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////
 ///////////////////////////
@@ -170,3 +218,7 @@
 // });
 
 // console.log(pls);
+
+////////////////////////////////////////////////
+//////////////////////////////////
+////////////////////

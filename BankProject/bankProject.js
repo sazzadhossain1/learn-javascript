@@ -84,12 +84,3 @@
 // ///////////////////////////////////////
 // ////////////////////////////
 // /////////////////
-
-const checkDogs = function (dogsjulia, dogsKate) {
-  const dogsjuliaCorrected = dogsjulia.slice();
-  dogsjuliaCorrected.splice(0, 1);
-  dogsjuliaCorrected.splice(-2);
-  console.log(dogsjuliaCorrected);
-};
-
-checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
