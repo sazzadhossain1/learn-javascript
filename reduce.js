@@ -56,3 +56,24 @@ const sum = numbers.reduce(function (acc, vol) {
 });
 
 console.log(sum);
+
+// Find max number from array //
+const max = numbers.reduce((acc, val) => {
+  if (acc > val) {
+    return acc;
+  } else {
+    return val;
+  }
+});
+
+console.log(max);
+
+// Find min number from array //
+const min = numbers.reduce((acc, val) => {
+  if (acc < val) {
+    return acc;
+  } else {
+    return val;
+  }
+});
+console.log(min);
