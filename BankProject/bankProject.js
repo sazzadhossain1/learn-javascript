@@ -120,6 +120,13 @@ createUserName1(accounts);
 
 // console.log(accounts);
 
+const calcDisplayBalance = function (movements) {
+  const blance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${blance} EUR`;
+};
+calcDisplayBalance(account1.movements);
+
+//////////////////////////////////
 const user = "Sazzad Hossain Tomal";
 const createUserName = function (userNum) {
   const userName = userNum
@@ -135,29 +142,52 @@ console.log(createUserName(user));
 //-------------------------------------------//
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const deposit = movements.filter(function (mov) {
-  return mov > 0;
-});
+// const deposit = movements.filter(function (mov) {
+//   return mov > 0;
+// });
 
-const depositFor = [];
+// const depositFor = [];
+// for (const mov of movements) {
+//   if (mov > 0) {
+//     depositFor.push(mov);
+//   }
+// }
+// console.log(deposit);
+// console.log(depositFor);
+
+// const withdrawal = movements.filter(function (mov) {
+//   return mov < 0;
+// });
+
+// console.log(withdrawal);
+
+// const withdrawalFor = [];
+// for (const mov of movements) {
+//   if (mov < 0) {
+//     withdrawalFor.push(mov);
+//   }
+// }
+// console.log(withdrawalFor);
+
+//--------------------------------//
+
+// const pushDepo = [];
+// const depo = movements.filter(function (de) {
+//   return pushDepo.push(de > 0);
+// });
+
+// console.log(pushDepo);
+
+//----------------------------------//
+
+const pus = [];
+const wi = [];
 for (const mov of movements) {
   if (mov > 0) {
-    depositFor.push(mov);
+    pus.push(mov);
+  } else if (mov < 0) {
+    wi.push(mov);
   }
 }
-console.log(deposit);
-console.log(depositFor);
-
-const withdrawal = movements.filter(function (mov) {
-  return mov < 0;
-});
-
-console.log(withdrawal);
-
-const withdrawalFor = [];
-for (const mov of movements) {
-  if (mov < 0) {
-    withdrawalFor.push(mov);
-  }
-}
-console.log(withdrawalFor);
+console.log(wi);
+console.log(pus);
