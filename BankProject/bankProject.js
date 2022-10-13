@@ -35,7 +35,7 @@ const account4 = {
 };
 
 const accounts = [account1, account2, account3, account4];
-
+// console.log(accounts);
 /////////////////////////////////////////////////
 // Elements
 const labelWelcome = document.querySelector(".welcome");
@@ -95,12 +95,69 @@ displayMovements(account1.movements);
 //   .join("");
 // console.log(userName);
 
-const user = "Steven Thomas Williams";
+// const createUserName = function (user) {
+//   const userName = user
+//     .toLowerCase()
+//     .split(" ")
+//     .map((name) => name[0])
+//     .join("");
+//   console.log(userName);
+// };
 
-const userName = user
-  .toLowerCase()
-  .split(" ")
-  .map((name) => name[0])
+// createUserName("Steven Thomas Williams");
 
-  .join("");
-console.log(userName);
+const createUserName1 = function (accs) {
+  accs.forEach(function (acc) {
+    acc.userName = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((name) => name[0])
+      .join("");
+  });
+};
+
+createUserName1(accounts);
+
+// console.log(accounts);
+
+const user = "Sazzad Hossain Tomal";
+const createUserName = function (userNum) {
+  const userName = userNum
+    .toLowerCase()
+    .split(" ")
+    .map((name) => name[0])
+    .join("");
+  return userName;
+};
+
+console.log(createUserName(user));
+
+//-------------------------------------------//
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const deposit = movements.filter(function (mov) {
+  return mov > 0;
+});
+
+const depositFor = [];
+for (const mov of movements) {
+  if (mov > 0) {
+    depositFor.push(mov);
+  }
+}
+console.log(deposit);
+console.log(depositFor);
+
+const withdrawal = movements.filter(function (mov) {
+  return mov < 0;
+});
+
+console.log(withdrawal);
+
+const withdrawalFor = [];
+for (const mov of movements) {
+  if (mov < 0) {
+    withdrawalFor.push(mov);
+  }
+}
+console.log(withdrawalFor);
