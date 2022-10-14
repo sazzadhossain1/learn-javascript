@@ -77,3 +77,41 @@ const min = numbers.reduce((acc, val) => {
   }
 });
 console.log(min);
+
+// find max number from number-array with another away //
+
+const max1 = numbers.reduce(function (acc, val) {
+  return Math.max(acc, val);
+});
+
+console.log(max1);
+
+// find min number from number-array with another away //
+
+const min1 = numbers.reduce((a, v) => Math.min(a, v));
+console.log(min1);
+
+//------------------------------------
+
+const products = [
+  {
+    name: "Pen",
+    mount: 5,
+    price: 10,
+  },
+  {
+    name: "Book",
+    mount: 3,
+    price: 300,
+  },
+  {
+    name: "NoteBook",
+    mount: 2,
+    price: 50,
+  },
+];
+
+const totalPrice = products.reduce(function (acc, item) {
+  return acc + item.mount * item.price;
+}, 0);
+console.log(totalPrice);

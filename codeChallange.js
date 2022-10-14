@@ -598,11 +598,32 @@ console.log(minutes);
 // A Closer Look at Functions //
 // Coding Challange --- 2 //
 
-(function () {
-  const header = document.querySelector("h1");
-  header.style.color = "red";
+// (function () {
+//   const header = document.querySelector("h1");
+//   header.style.color = "red";
 
-  document.querySelector(".poll").addEventListener("click", function () {
-    header.style.color = "blue";
+//   document.querySelector(".poll").addEventListener("click", function () {
+//     header.style.color = "blue";
+//   });
+// })();
+
+// Working With Arrays //
+// Coding Challange -- 1
+
+const checkDogs = function (dogOne, dogTwo) {
+  const dogOneSlice = dogOne.slice();
+  dogOneSlice.splice(0, 1);
+  dogOneSlice.splice(-2);
+  const dog = dogOneSlice.concat(dogTwo);
+  console.log(dog);
+  console.log("==================");
+  dog.forEach(function (dg, i) {
+    if (dg > 3) {
+      console.log(`Dog number ${i + 1} is an adult, and is ${dg} years odl`);
+    } else {
+      console.log(`Dog number ${i + 1} is still a puppy`);
+    }
   });
-})();
+};
+
+checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
