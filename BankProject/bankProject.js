@@ -127,15 +127,15 @@ const calcDisplayBalance = function (movements) {
 calcDisplayBalance(account1.movements);
 
 //////////////////////////////////
-const user = "Sazzad Hossain Tomal";
-const createUserName = function (userNum) {
-  const userName = userNum
-    .toLowerCase()
-    .split(" ")
-    .map((name) => name[0])
-    .join("");
-  return userName;
-};
+// const user = "Sazzad Hossain Tomal";
+// const createUserName = function (userNum) {
+//   const userName = userNum
+//     .toLowerCase()
+//     .split(" ")
+//     .map((name) => name[0])
+//     .join("");
+//   return userName;
+// };
 
 console.log(createUserName(user));
 

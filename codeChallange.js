@@ -627,3 +627,4 @@ const checkDogs = function (dogOne, dogTwo) {
 };
 
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+// checkDogs([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], [11, 22, 13, 13, 14]);
