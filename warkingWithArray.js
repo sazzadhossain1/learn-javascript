@@ -141,24 +141,24 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
 ///////////////////////////////////////////////////////////
 
-const eurToUsd = 1.1;
+// const eurToUsd = 1.1;
 
 // const movementsUSD = movements.map(function (mov) {
 //   return mov * eurToUsd;
 // });
-const movementsUSD = movements.map((mov) => {
-  return mov * eurToUsd;
-});
+// const movementsUSD = movements.map((mov) => {
+//   return mov * eurToUsd;
+// });
 
-console.log(movements);
-console.log(movementsUSD);
+// console.log(movements);
+// console.log(movementsUSD);
 
-console.log(movements);
-const movementsUSDfor = [];
-for (const mov of movements) {
-  movementsUSDfor.push(mov * eurToUsd);
-  console.log(movementsUSDfor);
-}
+// console.log(movements);
+// const movementsUSDfor = [];
+// for (const mov of movements) {
+//   movementsUSDfor.push(mov * eurToUsd);
+//   console.log(movementsUSDfor);
+// }
 
 const movDescriptions = movements.map(function (mov, i) {
   `Movement ${
@@ -241,3 +241,18 @@ console.log(movDescriptions);
 ////////////////////////////////////////////////
 //////////////////////////////////
 ////////////////////
+
+const eurToUsd = 1.1;
+console.log(movements);
+
+// PIPELINE //
+const totalDepositesUSD = movements
+  .filter((mov) => {
+    return mov > 0;
+  })
+  .map(function (mov, i, arr) {
+    return mov * eurToUsd;
+  })
+  // .map((mov) => acc + mov, 0);
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositesUSD);
