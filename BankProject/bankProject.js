@@ -7,7 +7,7 @@
 /////////////////////////////////////////////////
 // Data
 const account1 = {
-  owner: "Jonas Schmedtmann",
+  owner: "Sazzad Hossain",
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -119,6 +119,31 @@ const createUserName1 = function (accs) {
 createUserName1(accounts);
 
 // console.log(accounts);
+
+// Event handler //
+
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&//
+let currentAccount;
+let currentPin;
+btnLogin.addEventListener("click", function (e) {
+  //prevent from from submitting //
+  e.preventDefault();
+  currentAccount = accounts.find(
+    (acc) => acc.userName === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and message //
+    labelWelcome.textContent = `Welcome back ${
+      currentAccount.owner.split(" ")[0]
+    }`;
+    containerApp.style.opacity = 100;
+    // display movements
+    // display blance
+    // display summary
+  }
+});
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 const calcDisplayBalance = function (movements) {
   const blance = movements.reduce((acc, mov) => acc + mov, 0);
