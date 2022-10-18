@@ -44,3 +44,12 @@ console.log(arrDeep.flat(2));
 
 // const overBlance = allMovements.reduce((acc, mov) => acc + mov, 0);
 // console.log(overBlance);
+
+const accountMovements = accounts.map((acc) => acc.movements);
+console.log(accountMovements);
+
+const allMovements = accountMovements.flat();
+console.log(allMovements);
+
+const overBlance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overBlance);
