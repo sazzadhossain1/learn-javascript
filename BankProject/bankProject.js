@@ -183,7 +183,14 @@ btnLoan.addEventListener("click", function (e) {
     amount > 0 &&
     currentAccount.movements.some((mov) => mov >= amount * 0.1)
   ) {
+    // Add Movement
+    currentAccount.movements.push(amount);
+
+    // Update UI //
+    updateUI(currentAccount);
   }
+
+  inputLoanAmount.value = "";
 });
 // Delete Button //
 btnClose.addEventListener("click", function (e) {
