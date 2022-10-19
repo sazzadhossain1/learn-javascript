@@ -36,6 +36,7 @@ const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arrDeep.flat(2));
 
+// Flat...
 // const accountMovements = accounts.map((acc) => acc.movements);
 // console.log(accountMovements);
 
@@ -45,6 +46,7 @@ console.log(arrDeep.flat(2));
 // const overBlance = allMovements.reduce((acc, mov) => acc + mov, 0);
 // console.log(overBlance);
 
+// Flat...
 const accountMovements = accounts.map((acc) => acc.movements);
 console.log(accountMovements);
 
@@ -53,3 +55,42 @@ console.log(allMovements);
 
 const overBlance = allMovements.reduce((acc, mov) => acc + mov, 0);
 console.log(overBlance);
+
+// uporer same kaj ti akhon 1 bare korbo
+//------------------------------------//
+// Flat...
+
+const accnt = accounts
+  .map((acc) => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(accnt);
+//---------------------------------------------
+
+// flatMap
+const overalBlance = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overalBlance);
+
+const letter = [
+  "a",
+  "b",
+  "c",
+  " d",
+  ["e", "f", "g", " h", ["i", "j", "k"]],
+  ["l", "m", "n", "o"],
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  " w",
+  "x",
+  ["y", "z"],
+];
+
+const letterFlat = letter.flat(2).join(" ");
+console.log(letterFlat);
