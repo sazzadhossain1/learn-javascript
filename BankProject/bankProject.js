@@ -225,6 +225,15 @@ btnSort.addEventListener("click", function (e) {
   sorted = !sorted;
 });
 
+labelBalance.addEventListener("clilck", function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll(".movements__value"),
+    (el) => Number(el.textContent.replace("EUR", ""))
+  );
+  console.log(movementsUI);
+
+  const movementsUI2 = [...document.querySelectorAll(".movements__value")];
+});
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 const calcDisplayBalance = function (acc) {
