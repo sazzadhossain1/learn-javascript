@@ -430,3 +430,34 @@ console.log(numDeposits1000);
 // Prefixed ++ oprator
 let a = 10;
 console.log(++a);
+
+// 3.
+const { deposits, withdrawals } = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      sums[cur > 0 ? "deposits" : "withdrawals"];
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+console.log(deposits, withdrawals);
+
+// 4
+const convertTitleCase = function (title) {
+  const exceptions = ["a", "an", "and", "the", "but", "or", "on", "in", "with"];
+
+  const titleCase = title
+    .toLowerCase()
+    .split(" ")
+    .map((word) =>
+      exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    )
+    .join(" ");
+  return titleCase;
+};
+
+console.log(convertTitleCase("this is a nice title"));
+console.log(convertTitleCase("this is a Long title but not too long"));
+console.log(convertTitleCase("And here is another title with an EXAMPLE"));
