@@ -142,7 +142,7 @@ btnLogin.addEventListener("click", function (e) {
     (acc) => acc.userName === inputLoginUsername.value
   );
   console.log(currentAccount);
-  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+  if (currentAccount?.pin === +inputLoginPin.value) {
     // Display UI and message //
     labelWelcome.textContent = `Welcome back ${
       currentAccount.owner.split(" ")[0]
@@ -160,7 +160,7 @@ btnLogin.addEventListener("click", function (e) {
 
 btnTransfer.addEventListener("click", function (e) {
   e.preventDefault();
-  const amount = Number(inputTransferAmount.value);
+  const amount = +inputTransferAmount.value;
   const receiverAcc = accounts.find(
     (acc) => acc.userName === inputTransferTo.value
   );
@@ -182,7 +182,7 @@ btnTransfer.addEventListener("click", function (e) {
 
 btnLoan.addEventListener("click", function (e) {
   e.preventDefault();
-  const amount = Number(inputLoanAmount.value);
+  const amount = +inputLoanAmount.value;
   if (
     amount > 0 &&
     currentAccount.movements.some((mov) => mov >= amount * 0.1)
@@ -201,7 +201,7 @@ btnClose.addEventListener("click", function (e) {
   e.preventDefault();
   if (
     inputCloseUsername.value === currentAccount.userName &&
-    Number(inputClosePin.value) === currentAccount.pin
+    +inputClosePin.value === currentAccount.pin
   ) {
     const index = accounts.findIndex(
       (acc) => acc.userName === currentAccount.userName
@@ -228,7 +228,7 @@ btnSort.addEventListener("click", function (e) {
 labelBalance.addEventListener("clilck", function () {
   const movementsUI = Array.from(
     document.querySelectorAll(".movements__value"),
-    (el) => Number(el.textContent.replace("EUR", ""))
+    (el) => +el.textContent.replace("EUR", "")
   );
   console.log(movementsUI);
 
