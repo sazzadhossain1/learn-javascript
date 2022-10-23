@@ -77,7 +77,7 @@ const displayMovements = function (movements, sort = false) {
           <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-          <div class="movements__value">${mov.toFixed(2)} EUR</div>
+              <div class="movements__value">${mov.toFixed(2)} EUR</div>
         </div>`;
 
     containerMovements.insertAdjacentHTML("afterbegin", html);
@@ -133,6 +133,24 @@ const updateUI = function (acc) {
 
 // Event handler // -------> User login with pin
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&//
+
+// FAKE ALWAYS LOGGE IN
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
+
+const now = new Date();
+const day = `${now.getDate()}`.padStart(2, 0);
+const month = `${now.getMonth() + 1}`.padStart(2, 0);
+const Year = now.getFullYear();
+const time = now.toLocaleTimeString();
+const hours = now.getHours();
+const min = now.getMinutes();
+
+labelDate.textContent = `${day}/${month}/${Year}, ${time}`;
+
+// Displayed ----> Day/Month/Year
+
 let currentAccount;
 let currentPin;
 btnLogin.addEventListener("click", function (e) {

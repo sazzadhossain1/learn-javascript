@@ -28,7 +28,7 @@ const account4 = {
 
 // const accounts = [account1, account2, account3, account4];
 
-// const now = new Date();
+const now = new Date();
 // console.log(now);
 // console.log(new Date("2022-10-22T20:56:36.869Z"));
 // console.log(new Date("December 24,2015"));
@@ -60,6 +60,27 @@ const account4 = {
 
 // future.setFullYear(2090);
 // console.log(future);
+
+// console.log(+future);
+
+// const calcDaysPassed = (date1, date2) =>
+//   Math.abs(date1 - date2) / (100 * 60 * 60 * 24);
+
+// const days1 = calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14));
+// console.log(days1);
+
+const n = new Intl.DateTimeFormat("en-US").format(now);
+const n1 = new Intl.DateTimeFormat("en-GB").format(now);
+const n2 = new Intl.DateTimeFormat("ar-SY").format(now);
+const n3 = new Intl.DateTimeFormat("bn-BD").format(now);
+const n4 = new Intl.DateTimeFormat("pak-PI").format(now);
+const n5 = new Intl.DateTimeFormat("hi-In-India").format(now);
+console.log(n);
+console.log(n1);
+console.log(n2);
+console.log(n3);
+console.log(n4);
+console.log(n5);
 //////////////////////////////////////////////////
 /////////////////////////////////////
 ////////////////////////
@@ -67,12 +88,12 @@ const account4 = {
 // Hablu Programmer //
 //-----------------//
 
-const myDate = new Date();
-console.log(myDate.toTimeString());
-console.log(myDate.toLocaleTimeString());
-console.log(myDate.toLocaleDateString());
-console.log(myDate.getMonth());
-console.log(myDate.getDate());
-console.log(myDate.getMinutes());
-console.log(myDate.getSeconds());
-console.log(myDate.getMilliseconds());
+// const myDate = new Date();
+// console.log(myDate.toTimeString());
+// console.log(myDate.toLocaleTimeString());
+// console.log(myDate.toLocaleDateString());
+// console.log(myDate.getMonth());
+// console.log(myDate.getDate());
+// console.log(myDate.getMinutes());
+// console.log(myDate.getSeconds());
+// console.log(myDate.getMilliseconds());
