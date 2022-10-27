@@ -80,7 +80,16 @@ function Person1(firstName, lastName, dateOfBirth) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.dateOfBirth = new Date(dateOfBirth);
+  this.getFullYear = function () {
+    return this.dateOfBirth.getFullYear();
+  };
+
+  this.fullName = function () {
+    return this.firstName + " " + this.lastName;
+  };
 }
 
-const shayla = new Person1("Shayla", "Akther", "1996");
-console.log(shayla);
+const shayla = new Person1("Shayla", "Akther", "1/5/1996");
+// console.log(shayla);
+console.log(shayla.dateOfBirth.getFullYear());
+// console.log(shayla.fullName());
