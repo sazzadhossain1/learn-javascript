@@ -70,6 +70,8 @@ console.log(yeasin.fullName());
 sazzad.profetion = "Web developer";
 console.log(sazzad.profetion);
 
+Person.prototype.country = "Bangladesh";
+console.dir(Person);
 ////////////////////////////////////////////////////////////////
 //-----------------------------------------------------------//
 //////////////////////////////////////////////////////////////
