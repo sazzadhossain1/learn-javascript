@@ -461,3 +461,33 @@ const convertTitleCase = function (title) {
 console.log(convertTitleCase("this is a nice title"));
 console.log(convertTitleCase("this is a Long title but not too long"));
 console.log(convertTitleCase("And here is another title with an EXAMPLE"));
+
+//////////////////////////////////////////////////////////////
+
+console.log("--------xxxxxxxxxxxxxx---------");
+
+const Shayla = function (firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+
+  this.fullDetails = function () {
+    console.log(
+      `she's full name is ${this.firstName + " " + this.lastName} and ${
+        this.firstName
+      } is ${this.age} years old and she is live in ${this.city} ${
+        this.country
+      }`
+    );
+  };
+};
+
+const callShayla = new Shayla("Shayla", "akther", "26");
+console.log(callShayla);
+callShayla.country = "bangladesh";
+console.log(callShayla);
+
+Shayla.prototype.city = "Dhaka";
+console.dir(Shayla);
+
+callShayla.fullDetails();
