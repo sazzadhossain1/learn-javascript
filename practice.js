@@ -466,7 +466,7 @@ console.log(convertTitleCase("And here is another title with an EXAMPLE"));
 
 console.log("--------xxxxxxxxxxxxxx---------");
 
-const Shayla = function (firstName, lastName, age) {
+const Person = function (firstName, lastName, age) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.age = age;
@@ -482,12 +482,18 @@ const Shayla = function (firstName, lastName, age) {
   };
 };
 
-const callShayla = new Shayla("Shayla", "akther", "26");
+const callShayla = new Person("Shayla", "akther", "26");
 console.log(callShayla);
 callShayla.country = "bangladesh";
 console.log(callShayla);
 
-Shayla.prototype.city = "Dhaka";
-console.dir(Shayla);
+Person.prototype.city = "Dhaka";
+console.dir(Person);
 
 callShayla.fullDetails();
+
+const callYeasin = new Person("Yeasin", "Hossain", "5");
+console.log(callYeasin);
+
+callYeasin.country = "Bangladesh";
+callYeasin.fullDetails();
