@@ -38,3 +38,57 @@ console.log(dell);
 
 dell.computerModel = "1o1";
 console.log(dell);
+
+////////////////////////////////////////////////////
+//-----------------------------------------------//
+//////////////////////////////////////////////////
+
+console.log("-----------Sumit Vai----------");
+
+// Learn with sumit vai
+//-------------------//
+
+const person = {
+  firstName: "Sazzad",
+  lastName: "Hossain",
+  motherLanguage: "Bangla",
+  get lang() {
+    return this.motherLanguage;
+  },
+  set lang(lng) {
+    this.motherLanguage = lng;
+  },
+};
+
+person.lang = "English";
+
+console.log(person.lang);
+console.log(person);
+
+/// class constructor
+class Person {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  get fullName() {
+    return `${this.lastName}'s full name is ${
+      this.firstName + " " + this.lastName
+    } and she is ${this.age} years old`;
+  }
+  set callPerson(age) {
+    this.age = age;
+  }
+}
+
+const callPerson = new Person("Khadija tul", "Jannat", 2.5);
+callPerson.age = 5;
+console.log(callPerson);
+
+console.log(callPerson.fullName);
+
+console.log(callPerson);
+
+//
