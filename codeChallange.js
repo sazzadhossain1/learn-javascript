@@ -749,7 +749,7 @@ console.log("--------------xxxxxx------------");
 /////////////////////////////////////////////////////
 
 // Object Oriented Programming (OOP) //
-// Coding Challange --- 1//
+// Coding Challange --- 2//
 
 class CarCl {
   constructor(make, speed) {
