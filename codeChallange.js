@@ -721,28 +721,28 @@ console.log("--------------xxxxxx------------");
 // Object Oriented Programming (OOP) //
 // Coding Challange --- 1//
 
-// const Car = function (make, speed) {
-//   this.make = make;
-//   this.speed = speed;
-// };
+const Car = function (make, speed) {
+  this.make = make;
+  this.speed = speed;
+};
 
-// Car.prototype.accelerate = function () {
-//   this.speed += 10;
-//   console.log(`${this.make} is going at ${this.speed} km/h`);
-// };
+Car.prototype.accelerate = function () {
+  this.speed += 10;
+  console.log(`${this.make} is going at ${this.speed} km/h`);
+};
 
-// Car.prototype.brake = function () {
-//   this.speed -= 10;
-//   console.log(`${this.make} is going at ${this.speed} km/h`);
-// };
+Car.prototype.brake = function () {
+  this.speed -= 10;
+  console.log(`${this.make} is going at ${this.speed} km/h`);
+};
 
-// const bmw = new Car("BMW", 120);
-// const mercedes = new Car("Mercedes", 95);
+const bmw = new Car("BMW", 120);
+const mercedes = new Car("Mercedes", 95);
 
-// bmw.accelerate();
-// bmw.accelerate();
-// bmw.brake();
-// bmw.accelerate();
+bmw.accelerate();
+bmw.accelerate();
+bmw.brake();
+bmw.accelerate();
 
 ///////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
@@ -782,3 +782,31 @@ ford.accelerate();
 ford.brake();
 ford.speedUS = 50;
 console.log(ford);
+
+// Object Oriented Programming (OOP) //
+// Coding Challange --- 3//
+const EV = function (make, speed, charge) {
+  Car.call(this, make, speed);
+  this.charge = charge;
+};
+
+// Link the prototype
+EV.prototype = Object.create(Car.prototype);
+EV.prototype.chargeBattery = function (chargeTo) {
+  this.charge = chargeTo;
+};
+
+// EV.prototype.accelerate = function () {
+//   this.speed += 20;
+//   this.charge--;
+//   console.log(
+//     `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`
+//   );
+// };
+
+const tasla = new EV("Tesla", 120, 23);
+console.log(tasla);
+tasla.chargeBattery(90);
+console.log(tasla);
+tasla.brake();
+tasla.accelerate();
