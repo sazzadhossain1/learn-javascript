@@ -30,7 +30,7 @@ Yeasin.greet();
 /////////////////////////////////////////////
 
 // learn with sumit vai
-//-------------------//+
+//-------------------//
 
 // class Person {
 //   constructor(name, age) {
