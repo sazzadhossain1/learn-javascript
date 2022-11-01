@@ -765,6 +765,7 @@ class CarCl {
   brake = function () {
     this.speed -= 10;
     console.log(`${this.make} is going at ${this.speed} km/h`);
+    return this;
   };
 
   get speedUS() {
@@ -790,28 +791,84 @@ console.log(ford);
 // Object Oriented Programming (OOP) //
 // Coding Challange --- 3//
 
-const EV = function (make, speed, charge) {
-  Car.call(this, make, speed);
-  this.charge = charge;
-};
-
-// Link the prototype
-EV.prototype = Object.create(Car.prototype);
-EV.prototype.chargeBattery = function (chargeTo) {
-  this.charge = chargeTo;
-};
-
-// EV.prototype.accelerate = function () {
-//   this.speed += 20;
-//   this.charge--;
-//   console.log(
-//     `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`
-//   );
+// const EV = function (make, speed, charge) {
+//   Car.call(this, make, speed);
+//   this.charge = charge;
 // };
 
-const tasla = new EV("Tesla", 120, 23);
-console.log(tasla);
-tasla.chargeBattery(90);
-console.log(tasla);
-tasla.brake();
-tasla.accelerate();
+// // Link the prototype
+// EV.prototype = Object.create(Car.prototype);
+// EV.prototype.chargeBattery = function (chargeTo) {
+//   this.charge = chargeTo;
+// };
+
+// // EV.prototype.accelerate = function () {
+// //   this.speed += 20;
+// //   this.charge--;
+// //   console.log(
+// //     `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`
+// //   );
+// // };
+
+// const tasla = new EV("Tesla", 120, 23);
+// console.log(tasla);
+// tasla.chargeBattery(90);
+// console.log(tasla);
+// tasla.brake();
+// tasla.accelerate();
+
+////////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
+// Object Oriented Programming (OOP) //
+// Coding Challange --- 4//
+
+class EVCl extends CarCl {
+  #charge;
+  constructor(make, speed, charge) {
+    super(this, make, speed);
+    this.#charge = charge;
+    return this;
+  }
+
+  chargeBattery(chargeTo) {
+    this.#charge = chargeTo;
+    return this;
+  }
+
+  accelerate() {
+    this.speed += 20;
+    this.#charge--;
+    console.log(
+      `${this.make} is going at ${this.speed} km/h, with a charge of ${
+        this.#charge
+      }`
+    );
+    return this;
+  }
+
+  // brake = function () {
+  //   this.speed -= 10;
+  //   console.log(`${this.make} is going at ${this.speed} km/h`);
+  //   return this;
+  // };
+
+  // get speedUS() {
+  //   return this.speed / 1.6;
+  // }
+  // set speedUS(speed) {
+  //   this.speed = speed * 1.6;
+  // }
+}
+
+const revian = new EVCl("Rivian", 120, 23);
+console.log(revian);
+
+revian
+  .accelerate()
+  .accelerate()
+  .accelerate()
+  .brake()
+  .chargeBattery()
+  .accelerate();

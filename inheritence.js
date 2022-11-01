@@ -106,11 +106,17 @@ jay.init("Jay", 2010, "Computer Science");
 console.log("----------- Another Class Example ---------");
 
 class Account {
+  // 1) Public fields (instances)
+  // locale = navigator.language;
+
+  // 2) Private fields
+  _movements = [];
+
   constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
     this.pin = pin;
-    this._movements = [];
+    // this._movements = [];
     // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}`);
@@ -122,10 +128,12 @@ class Account {
 
   deposit(val) {
     this._movements.push(val);
+    return this;
   }
 
   withdraw(val) {
     this.deposit(-val);
+    return this;
   }
 
   _approveLoan(val) {
@@ -136,6 +144,7 @@ class Account {
     if (this._approveLoan(val)) {
       this.deposit(val);
       console.log(`Loan approved`);
+      return this;
     }
   }
 }
@@ -155,3 +164,6 @@ console.log(acc1);
 console.log(acc1.owner);
 console.log(acc1.currency);
 console.log(acc1.pin);
+
+acc1.deposit(300).deposit(500).withdraw(35).requestLoan(2500).withdraw(4000);
+console.log(acc1.getMovements());
