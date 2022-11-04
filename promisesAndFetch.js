@@ -144,3 +144,36 @@ promiseMethod
   .catch((v) => {
     console.log(v);
   });
+
+//..........................................
+
+const getJob = (expertProgrammer) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (expertProgrammer === true) resolve("You can join our company ");
+      else {
+        reject("You can better try again leter");
+      }
+    }, 2000);
+  });
+};
+
+getJob(false)
+  .then((v) => {
+    console.log(v);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+
+console.log("-------------- Fetch ------------");
+
+const BASE_URL = "http://jsonplaceholder.typicode.com";
+fetch(`${BASE_URL}/users/1`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
