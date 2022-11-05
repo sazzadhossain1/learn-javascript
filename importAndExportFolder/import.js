@@ -21,6 +21,17 @@ import * as exportAll from "./export.js";
 
 exportAll.addToCard("bread", 5);
 console.log(exportAll.totalPrice);
+
+//Import default
+//..............
+import add, { cart } from "./export.js";
+
+add("Dog", 1);
+add("Bread", 5);
+add("Apple", 4);
+
+console.log(cart);
+
 ///////////////////////////////////////////////////
 /////////////////////////////////////////////////
 ///////////////////////////////////////////////

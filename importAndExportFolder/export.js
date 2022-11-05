@@ -1,5 +1,5 @@
 const shippingCost = 10;
-const cart = [];
+export const cart = [];
 
 export const addToCard = function (product, quantity) {
   cart.push({ product, quantity });
@@ -8,6 +8,13 @@ export const addToCard = function (product, quantity) {
 
 export const totalPrice = 237;
 export const totalQuantity = 23;
+
+// Default export
+//..............
+export default function (product, quantity) {
+  cart.push({ product, quantity });
+  console.log(`${quantity} ${product} added to cart`);
+}
 ////////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 /////////////////////////////////////////////////
