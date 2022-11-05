@@ -31,30 +31,30 @@
 
 console.log("------------ Learn with sumit vai --------------");
 
-const status = true;
+// const status = true;
 
-console.log("task 1");
+// console.log("task 1");
 
-// promise defination
-const promise = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    if (status) {
-      resolve("taskk 2");
-    } else {
-      reject("failed");
-    }
-  }, 1000);
-});
+// // promise defination
+// const promise = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     if (status) {
+//       resolve("taskk 2");
+//     } else {
+//       reject("failed");
+//     }
+//   }, 1000);
+// });
 
-// call promise function
-promise
-  .then(function (value) {
-    console.log(value);
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
-console.log("task 3");
+// // call promise function
+// promise
+//   .then(function (value) {
+//     console.log(value);
+//   })
+//   .catch(function (err) {
+//     console.log(err);
+//   });
+// console.log("task 3");
 
 ///////////////////////////////////////////////
 //////////////////////////////////////////////
@@ -120,60 +120,113 @@ console.log("---------- Lear with Stack Learner ----------");
 
 //...........................................
 
-const exm = "Passed";
+// const exm = "Passed";
 
-// promise defination
+// // promise defination
 
-const promiseMethod = new Promise((resolve, reject) => {
+// const promiseMethod = new Promise((resolve, reject) => {
+//   setTimeout(function () {
+//     if (exm === "Passed") {
+//       resolve("Take money and go the market and bying the your dream Phone");
+//     } else {
+//       reject(
+//         "You can't passed the exm that's why i don't give you any money for the PHONE....Go get back to your stady table"
+//       );
+//     }
+//   }, 1000);
+// });
+
+// // promise call
+// promiseMethod
+//   .then(function (v) {
+//     console.log(v);
+//   })
+//   .catch((v) => {
+//     console.log(v);
+//   });
+
+// //..........................................
+
+// const getJob = (expertProgrammer) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (expertProgrammer === true) resolve("You can join our company ");
+//       else {
+//         reject("You can better try again leter");
+//       }
+//     }, 2000);
+//   });
+// };
+
+// getJob(false)
+//   .then((v) => {
+//     console.log(v);
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
+
+// console.log("-------------- Fetch ------------");
+
+// const BASE_URL = "http://jsonplaceholder.typicode.com";
+// fetch(`${BASE_URL}/users/1`)
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
+
+/////////////////////////////////////////////////////////////
+
+console.log("------------- Jonas Vai -------------");
+
+// console.log("Test start");
+// setTimeout(() => console.log("0 sec timer"), 0);
+// Promise.resolve("Resolved promise 1").then((res) => console.log(res));
+
+// Promise.resolve("Resolved promise 2").then((res) => {
+//   for (let i = 0; i < 100000000; i++) {}
+//   console.log(res);
+// });
+
+// console.log("Test end");
+
+/////////////////////////////////////////////////
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log("Lotter draw is happening");
   setTimeout(function () {
-    if (exm === "Passed") {
-      resolve("Take money and go the market and bying the your dream Phone");
+    if (Math.random() >= 0.5) {
+      resolve("You WIN");
     } else {
-      reject(
-        "You can't passed the exm that's why i don't give you any money for the PHONE....Go get back to your stady table"
-      );
+      reject(new Error("You lost your money"));
     }
-  }, 1000);
+  }, 2000);
 });
+lotteryPromise.then((res) => console.log(res)).catch((err) => console.log(err));
 
-// promise call
-promiseMethod
-  .then(function (v) {
-    console.log(v);
-  })
-  .catch((v) => {
-    console.log(v);
-  });
-
-//..........................................
-
-const getJob = (expertProgrammer) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (expertProgrammer === true) resolve("You can join our company ");
-      else {
-        reject("You can better try again leter");
-      }
-    }, 2000);
+//Promisifying setTimeout
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
   });
 };
-
-getJob(false)
-  .then((v) => {
-    console.log(v);
+wait(2)
+  .then(() => {
+    console.log("1 second passed");
+    return wait(1);
   })
-  .catch((e) => {
-    console.log(e);
-  });
-
-console.log("-------------- Fetch ------------");
-
-const BASE_URL = "http://jsonplaceholder.typicode.com";
-fetch(`${BASE_URL}/users/1`)
-  .then((res) => res.json())
-  .then((data) => {
-    console.log(data);
+  .then(() => {
+    console.log("2 second passed");
+    return wait(1);
   })
-  .catch((e) => {
-    console.log(e);
-  });
+  .then(() => {
+    console.log("3 second passed");
+    return wait(1);
+  })
+  .then(() => console.log("4 second passed"));
+
+Promise.resolve("abc").then((x) => console.log(x));
+Promise.reject(new Error("Problem!")).catch((x) => console.error(x));
